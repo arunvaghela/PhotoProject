@@ -72,7 +72,28 @@
 <script src="{{ url('assets/js/jquery.magnific-popup.js') }}"></script>
 <script src="{{ url('assets/js/YouTubePopUp.js') }}"></script>
 <script src="{{ url('assets/js/smooth-scroll.min.js') }}"></script>
+<script src="{{ url('assets/js/vegas.slider.min.js') }}"></script>
 <script src="{{ url('assets/js/custom.js') }}"></script>
+<!-- Vegas Background Slideshow (vegas.slider kenburns) -->
+<script>
+    $(document).ready(function() {
+        $('#kenburnsSliderContainer').vegas({
+            slides: [{
+                src: "{{ url('assets/img/slider/1.jpg')}}"
+            }, {
+                src: "{{ url('assets/img/slider/2.jpg')}}"
+            }, {
+                src: "{{ url('assets/img/slider/3.jpg')}}"
+            }],
+            overlay: true,
+            transition: 'fade2',
+            animation: 'kenburnsUpRight',
+            transitionDuration: 1000,
+            delay: 10000,
+            animationDuration: 20000
+        });
+    });
+</script>
 </body>
 <!-- Mirrored from duruthemes.com/demo/html/florya/light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jan 2024 10:19:47 GMT -->
 </html>
