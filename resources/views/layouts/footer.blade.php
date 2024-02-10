@@ -79,11 +79,11 @@
     $(document).ready(function() {
         $('#kenburnsSliderContainer').vegas({
             slides: [{
-                src: "{{ url('assets/img/slider/1.jpg')}}"
+                src: '{{ $img1 }}'
             }, {
-                src: "{{ url('assets/img/slider/2.jpg')}}"
+                src: '{{ $img2 }}'
             }, {
-                src: "{{ url('assets/img/slider/3.jpg')}}"
+                src: '{{ $img3 }}'
             }],
             overlay: true,
             transition: 'fade2',

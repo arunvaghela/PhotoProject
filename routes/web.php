@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
@@ -20,7 +22,19 @@ Route::get('/', [PageController::class, 'home']);
 
 Route::prefix('admin')->group(function () {
     // Define your admin routes here
-    Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::get('/form', [AdminController::class, 'form'])->name('admin.form');
-    // Add more routes as needed
+
+    Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
+    Route::get('create', [SliderController::class, 'create'])->name('admin.create');
+    Route::post('store', [SliderController::class, 'store'])->name('admin.store');
+    Route::get('{id}/edit', [SliderController::class, 'edit'])->name('admin.edit');
+    Route::put('{id}', [SliderController::class, 'update'])->name('admin.update');
+    Route::delete('{id}', [SliderController::class, 'destroy'])->name('admin.destroy');
+
+    Route::get('/services', [ServiceController::class, 'index'])->name('admin.services');
+    Route::get('/services/create', [SliderController::class, 'create'])->name('admin.services.create');
+    Route::post('/services/store', [SliderController::class, 'store'])->name('admin.services.store');
+    Route::get('/services/{id}/edit', [SliderController::class, 'edit'])->name('admin.services.edit');
+    Route::put('/services/{id}', [SliderController::class, 'update'])->name('admin.services.update');
+    Route::delete('/services/{id}', [SliderController::class, 'destroy'])->name('admin.services.destroy');
+
 });

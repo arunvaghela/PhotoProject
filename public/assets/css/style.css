@@ -3,7 +3,7 @@
  01. Custom & Google Font style
  02. Basics style
  03. Helper style
- 04. Selection style 
+ 04. Selection style
  05. Preloader style
  06. Owl-Theme custom style
  07. Section style
@@ -22,7 +22,7 @@
  20. Portfolio style
  21. Pricing style
  22. Signup style
- 23. Clients style 
+ 23. Clients style
  24. Gallery style
  25. Isotope/Masonry Gallery style
  26. Video style
@@ -39,7 +39,7 @@
  37. toTop Button style
  38. Overlay Effect Bg image style
  39. Responsive (Media Query)
- 
+
 ------------------------------------------------------- */
 
 /* Custom & Google Font style */
@@ -285,7 +285,7 @@ blockquote cite:before {
     bottom: 5px;
     width: 45px;
     height: 1px;
-    border-top: 1px solid; 
+    border-top: 1px solid;
     border-color:inherit;
     color: #748173;
 }
@@ -798,7 +798,7 @@ color: #fff;
 }
 .section-padding .white,
 .section-padding h5.white,
-.section-subtitle.white, 
+.section-subtitle.white,
 .section-title.white,
 .section-title span.white {
     color: #fff;
@@ -1001,7 +1001,7 @@ color: #fff;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-    }    
+    }
 }
 @media screen and (max-width: 991px) {
     .navbar {
@@ -1066,7 +1066,7 @@ color: #fff;
     }
     .nav-scroll .navbar-collapse .active {
         color: #748173 !important;
-    }   
+    }
     .navbar .dropdown-menu .dropdown-item {
         padding: 0 15px;
         font-size: 15px;
@@ -1782,7 +1782,7 @@ hr {
 @media screen and (max-width: 768px) {
     .banner-header2 .slider-text > .slider-text-inner {
         text-align: center;
-    } 
+    }
 }
 
 
@@ -1812,7 +1812,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: right;
-    
+
 }
 .video-lauch-wrapper {
   border: none;
@@ -1830,7 +1830,7 @@ hr {
   height: 100%;
   margin: 0;
   box-sizing: border-box;
-  text-align: center; 
+  text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2071,7 +2071,7 @@ hr.border {
     -webkit-box-ordinal-group: 2 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
-  }  
+  }
 }
 
 
@@ -2167,7 +2167,7 @@ position: relative;
     margin-top: 0px;
     margin-bottom: 10px;
 }
-.services .item .con h5 span, 
+.services .item .con h5 span,
 .services .item .con h5 a span {
     font-family: 'Dantina', sans-serif;
 }
@@ -2675,7 +2675,7 @@ font-family: 'Dantina', sans-serif;
     font-size: 16px;
     color: #fff;
     padding-left: 30px;
-    
+
 }
 .pricing .list li+li {
   margin-top: 5px;
@@ -2795,7 +2795,7 @@ font-family: 'Dantina', sans-serif;
   left: 0px;
 }
 .signup .content .cont .more:hover {
-   color: #000; 
+   color: #000;
 }
 .signup .content .cont h6 {
     font-size: 12px;
@@ -2810,10 +2810,10 @@ font-family: 'Dantina', sans-serif;
 .signup .content .info .tags {
   color: #748173;
 }
-.signup input[type="password"], 
-.signup input[type="email"], 
-.signup input[type="text"], 
-.signup input[type="file"], 
+.signup input[type="password"],
+.signup input[type="email"],
+.signup input[type="text"],
+.signup input[type="file"],
 .signup textarea {
     margin-bottom: 15px;
 }
@@ -2831,7 +2831,7 @@ font-family: 'Dantina', sans-serif;
     -webkit-box-ordinal-group: 2 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
-  }  
+  }
 }
 @media screen and (max-width: 480px) {
     .signup .content .date {
@@ -3024,7 +3024,7 @@ button.mfp-arrow {
     .florya-gallery-items .single-item {
         padding-bottom: 30px;
     }
- 
+
 }
 @media only screen and (max-width: 400px) {
   .florya-masonry-wrapper {
@@ -3453,7 +3453,7 @@ font-family: 'Didact Gothic', sans-serif;
     margin-bottom: 0px;
     line-height: 1.5em;
 }
-.blog .item .con h5 span, 
+.blog .item .con h5 span,
 .blog .item .con h5 a span {
     font-family: 'Dantina', sans-serif;
 }
@@ -3846,7 +3846,7 @@ font-family: 'Didact Gothic', sans-serif;
 .contact-info .text p {
     font-size: 16px;
     margin: 0;
-    
+
 }
 .contact-info .text a {
     font-size: 20px;
@@ -4528,11 +4528,11 @@ select {
     }
     .header .caption .slider-text > .slider-text-inner h1 {
         font-size: 27px;
-    } 
-    
+    }
+
     .kenburns-inner .caption h1 {
         font-size: 27px;
-    } 
+    }
     .banner-header .slider-text > .slider-text-inner h1 {
         font-size: 27px;
     }
