@@ -31,7 +31,7 @@
                             <td>{{ $value->is_active == 'Y' ? 'Active' : 'DeActive' }}</td>
                             <td>
                                 <a class="btn btn-sm btn-primary"
-                                   href="{{ route('admin.update', $value->id) }}">Edit</a>
+                                   href="{{ route('admin.edit', $value->id) }}">Edit</a>
                                 <div style="display: inline-flex">
                                     <form action="{{ route('admin.destroy', $value->id) }}" method="post">
                                         @csrf

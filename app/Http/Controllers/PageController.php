@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -18,14 +19,21 @@ class PageController extends Controller
         $img2 = isset($slides[1]->img) ? asset('images/slider/' . $slides[1]->img) : asset('images/default/1.jpg');
         $img3 = isset($slides[2]->img) ? asset('images/slider/' . $slides[2]->img) : asset('images/default/1.jpg');
 
+        $services = Service::all();
 
-
-        return view('home', compact('img1', 'img2', 'img3'));
+        return view('home', compact('img1', 'img2', 'img3', 'services'));
     }
 
     public function about()
     {
         return view('pages.about');
+    }
+
+    public function services($id)
+    {
+        $services = Service::findOrFail($id);
+        $allServices = Service::all();
+        return view('services', compact('services', 'allServices'));
     }
 
     public function contact()

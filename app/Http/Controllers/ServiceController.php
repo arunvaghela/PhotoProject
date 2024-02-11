@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use File;
 
 class ServiceController extends Controller
 {
@@ -24,19 +25,30 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'name' => 'required',
+            'short_desc' => 'required',
+            'long_desc' => 'required',
             'active' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'slider_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'desc_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('images/service'), $imageName);
+        $imageSliderName = time().'slider.'.$request->slider_image->extension();
+        $request->slider_image->move(public_path('images/service'), $imageSliderName);
+
+        $imageDescName = time().'desc.'.$request->desc_image->extension();
+        $request->desc_image->move(public_path('images/service'), $imageDescName);
 
         Service::create([
+            'name' => $request->name,
             'is_active' => $request->active,
-            'img' => $imageName,
+            'slider_img' => $imageSliderName,
+            'desc_img' => $imageDescName,
+            'short_desc' => $request->short_desc,
+            'long_desc' => $request->long_desc,
         ]);
 
-        return redirect()->route('admin.services.slider')->with('success', 'Service created successfully.');
+        return redirect()->route('admin.services')->with('success', 'Service created successfully.');
     }
 
     public function edit($id)
@@ -48,22 +60,36 @@ class ServiceController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'name' => 'required',
+            'short_desc' => 'required',
+            'long_desc' => 'required',
             'active' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'slider_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'desc_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $slides = Service::findOrFail($id);
+        $services = Service::findOrFail($id);
 
-        $slides->is_active = $request->active;
+        $services->is_active = $request->active;
+        $services->name = $request->name;
+        $services->short_desc = $request->short_desc;
+        $services->long_desc = $request->long_desc;
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('slider_image')) {
             // Upload and update image
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images/service'), $imageName);
-            $slides->img = $imageName;
+            $imageSliderName = time().'slider.'.$request->slider_image->extension();
+            $request->slider_image->move(public_path('images/service'), $imageSliderName);
+            $services->slider_img = $imageSliderName;
         }
 
-        $slides->save();
+        if ($request->hasFile('desc_image')) {
+            // Upload and update image
+            $imageDescName = time().'desc.'.$request->desc_image->extension();
+            $request->desc_image->move(public_path('images/service'), $imageDescName);
+            $services->desc_img = $imageDescName;
+        }
+
+        $services->save();
 
         return redirect()->route('admin.services')->with('success', 'Service updated successfully.');
     }

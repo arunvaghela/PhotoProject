@@ -5,6 +5,14 @@
     <!-- Form Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <i class="fa fa-exclamation-circle me-2"></i>{{ $error }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endforeach
+            @endif
             <div class="col-sm-12 col-xl-9">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Edit Slider</h6>

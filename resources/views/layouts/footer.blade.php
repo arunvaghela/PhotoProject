@@ -7,12 +7,6 @@
                     <div class="footer-column footer-about">
                         <h3 class="footer-title">Florya Weddings</h3>
                         <p class="footer-about-text">Hi, I’m Samantha, wedding planner and designer, loving life in the wonderful New York. The nestam acuam nec odio the elementum.</p>
-                        <div class="footer-language"> <i class="lni ti-world"></i>
-                            <select onchange="location = this.value;">
-                                <option value="#0">English</option>
-                                <option value="#0">German</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 offset-md-1">
@@ -74,9 +68,11 @@
 <script src="{{ url('assets/js/smooth-scroll.min.js') }}"></script>
 <script src="{{ url('assets/js/vegas.slider.min.js') }}"></script>
 <script src="{{ url('assets/js/custom.js') }}"></script>
+
 <!-- Vegas Background Slideshow (vegas.slider kenburns) -->
 <script>
     $(document).ready(function() {
+        @if(isset($img1))
         $('#kenburnsSliderContainer').vegas({
             slides: [{
                 src: '{{ $img1 }}'
@@ -92,6 +88,7 @@
             delay: 10000,
             animationDuration: 20000
         });
+        @endif
     });
 </script>
 </body>

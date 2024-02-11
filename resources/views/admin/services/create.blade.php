@@ -21,12 +21,28 @@
 
             <div class="col-sm-12 col-xl-9">
                 <div class="bg-secondary rounded h-100 p-4">
-                    <h6 class="mb-4">Add Slider</h6>
-                    <form method="post" action="{{ route('admin.store')  }}" enctype="multipart/form-data">
+                    <h6 class="mb-4">Add Service</h6>
+                    <form method="post" action="{{ route('admin.services.store')  }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Image</label>
-                            <input class="form-control bg-dark" type="file" name="image" id="formFile" required>
+                            <label for="name" class="form-label">Service Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Service Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Slider Image</label>
+                            <input class="form-control bg-dark" type="file" name="slider_image" id="formFile" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Description Image</label>
+                            <input class="form-control bg-dark" type="file" name="desc_image" id="formFile" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Short Description</label>
+                            <textarea class="form-control" placeholder="Short Description" name="short_desc" id="shortfloatingTextarea" style="height: 150px;"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Long Description</label>
+                            <textarea class="form-control" placeholder="Long Description" name="long_desc" id="longfloatingTextarea" style="height: 150px;"></textarea>
                         </div>
                         <div class="mb-3 form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="active" id="active" value="Y" checked required>

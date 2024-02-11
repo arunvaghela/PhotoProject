@@ -18,6 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('name', '256');
             $table->longText('slider_img');
             $table->longText('desc_img');
+            $table->enum('is_active', ['Y', 'N'])->default('Y');
             $table->longText('short_desc');
             $table->longText('long_desc');
             $table->timestamps();

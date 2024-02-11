@@ -64,89 +64,35 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
+                        @forelse($services as $key => $value)
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src="{{asset('images/service/' . $value->slider_img)}}" alt="">
+                                </div>
+                                <div class="con">
+                                    <h5><a href="{{ route('service', $value->id) }}">Wedding <span>Planner</span></a></h5>
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col-md-12 text-right">
+                                            <div class="permalink"><a href="{{ route('service', $value->id) }}">Explore <i class="ti-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
                         <div class="item">
                             <div class="position-re o-hidden"><img src="{{url('assets/img/services/1.jpg')}}" alt="">
                             </div>
                             <div class="con">
-                                <h5><a href="services-page.html">Wedding <span>Planner</span></a></h5>
+                                <h5><a href="javascript:void(0)">Wedding <span>Planner</span></a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
                                     <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
-                                                    class="ti-arrow-right"></i></a></div>
+                                        <div class="permalink"><a href="javascript:void(0)">Explore <i class="ti-arrow-right"></i></a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/5.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="services-page.html">Master of <span>Ceremonies</span></a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
-                                                    class="ti-arrow-right"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/6.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="services-page.html">Special <span>Events</span></a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
-                                                    class="ti-arrow-right"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/2.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="services-page.html"><span>Birthday</span> Planner</a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
-                                                    class="ti-arrow-right"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/3.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="services-page.html">Destination <span>Wedding</span></a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
-                                                    class="ti-arrow-right"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/4.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="services-page.html">Corporate <span>Events</span></a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i class="ti-arrow-right"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforelse
                     </div>
                 </div>
             </div>
