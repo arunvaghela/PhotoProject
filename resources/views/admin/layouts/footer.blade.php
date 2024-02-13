@@ -29,6 +29,7 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 <script src="{{url('panel/lib/chart/chart.min.js')}}"></script>
 <script src="{{url('panel/lib/easing/easing.min.js')}}"></script>
 <script src="{{url('panel/lib/waypoints/waypoints.min.js')}}"></script>
@@ -39,6 +40,14 @@
 
 <!-- Template Javascript -->
 <script src="{{url('panel/js/main.js')}}"></script>
+<script>
+    //CKEDITOR.replace('long_desc');
+    ClassicEditor.create( document.querySelector( '#long_desc' ), { minHeight: 500,
+        maxHeight: 1000 } ).catch( error => {console.error( error );} );
+    ClassicEditor.create( document.querySelector( '#short_desc' ), { minHeight: 500,
+        maxHeight: 1000 } ).catch( error => {console.error( error );} );
+
+</script>
 </body>
 
 </html>

@@ -40,13 +40,13 @@
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Short Description</label>
                             <textarea class="form-control" placeholder="Short Description" name="short_desc"
-                                      id="shortfloatingTextarea"
+                                      id="short_desc"
                                       style="height: 150px;">{{ $services->short_desc }}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Long Description</label>
                             <textarea class="form-control" placeholder="Long Description" name="long_desc"
-                                      id="longfloatingTextarea"
+                                      id="long_desc"
                                       style="height: 150px;">{{ $services->long_desc }}</textarea>
                         </div>
                         <div class="mb-3 form-check form-check-inline">
@@ -68,5 +68,4 @@
         </div>
     </div>
     <!-- Form End -->
-
 @endsection

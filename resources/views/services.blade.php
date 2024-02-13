@@ -15,7 +15,7 @@
                         <div class="desc">
                             <h4>Our Services</h4>
                             <h1>{{ $services->name }}</h1>
-                            <p>{{ $services->short_desc }}</p>
+                            <p>{!! $services->short_desc !!} </p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="col-md-5 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft"><img
                         src="{{ $sliderPath }}" class="img-fluid mb-30" alt=""></div>
                 <div class="col-md-7 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                    {{ $services->long_desc }}
+                    {!! $services->long_desc !!}
                 </div>
             </div>
         </div>

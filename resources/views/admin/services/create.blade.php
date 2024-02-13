@@ -38,11 +38,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Short Description</label>
-                            <textarea class="form-control" placeholder="Short Description" name="short_desc" id="shortfloatingTextarea" style="height: 150px;"></textarea>
+                            <textarea class="form-control" placeholder="Short Description" name="short_desc" id="short_desc" style="height: 500px;"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Long Description</label>
-                            <textarea class="form-control" placeholder="Long Description" name="long_desc" id="longfloatingTextarea" style="height: 150px;"></textarea>
+                            <textarea class="form-control" placeholder="Long Description" name="long_desc" id="long_desc" style="height: 500px;"></textarea>
                         </div>
                         <div class="mb-3 form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="active" id="active" value="Y" checked required>
