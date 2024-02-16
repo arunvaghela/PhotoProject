@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,8 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [PageController::class, 'home']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/service', [PageController::class, 'service']);
 Route::get('/service/{id}', [PageController::class, 'services'])->name('service');
 
 Route::prefix('admin')->group(function () {
@@ -37,5 +40,12 @@ Route::prefix('admin')->group(function () {
     Route::get('/services/{id}/edit', [ServiceController::class, 'edit'])->name('admin.services.edit');
     Route::put('/services/{id}', [ServiceController::class, 'update'])->name('admin.services.update');
     Route::delete('/services/{id}', [ServiceController::class, 'destroy'])->name('admin.services.destroy');
+
+    Route::get('/portfolio', [PortfolioController::class, 'index'])->name('admin.portfolio');
+    Route::get('/portfolio/create', [PortfolioController::class, 'create'])->name('admin.portfolio.create');
+    Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('admin.portfolio.store');
+    Route::get('/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolio.edit');
+    Route::put('/portfolio/{id}', [PortfolioController::class, 'update'])->name('admin.portfolio.update');
+    Route::delete('/portfolio/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolio.destroy');
 
 });

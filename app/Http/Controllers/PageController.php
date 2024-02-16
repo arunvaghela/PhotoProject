@@ -28,6 +28,11 @@ class PageController extends Controller
     {
         return view('pages.about');
     }
+    public function service()
+    {
+        $allServices = Service::all();
+        return view('pages.service', compact('allServices'));
+    }
 
     public function services($id)
     {

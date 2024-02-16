@@ -47,8 +47,8 @@
 {{--                    </ul>--}}
 {{--                </li>--}}
                 <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/service')}}">Services</a></li>
                 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Portfolio <i class="ti-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="portfolio-grid.html" class="dropdown-item"><span>Portfolio Grid</span></a></li>

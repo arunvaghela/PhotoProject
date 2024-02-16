@@ -135,7 +135,7 @@
                                 <div class="position-re o-hidden"><img src="{{asset('images/service/' . $value->slider_img)}}" alt="">
                                 </div>
                                 <div class="con">
-                                    <h5><a href="{{ route('service', $value->id) }}">Wedding <span>Planner</span></a></h5>
+                                    <h5><a href="{{ route('service', $value->id) }}">{{ $value->name }}</a></h5>
                                     <div class="line"></div>
                                     <div class="row facilities">
                                         <div class="col-md-12 text-right">

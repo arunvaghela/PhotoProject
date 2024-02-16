@@ -11,9 +11,6 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::all();
-        if($services->isNotEmpty() && $services->count() > 3){
-            $services->random(3);
-        }
         return view('admin.services.index', compact('services'));
     }
 
@@ -99,8 +96,12 @@ class ServiceController extends Controller
         $slides = Service::findOrFail($id);
 
         // Delete the associated image file
-        if (File::exists(public_path('images/service' . $slides->image))) {
-            File::delete(public_path('images/service' . $slides->image));
+        if (File::exists(public_path('images/service/' . $slides->slider_img))) {
+            File::delete(public_path('images/service/' . $slides->slider_img));
+        }
+
+        if (File::exists(public_path('images/service/' . $slides->desc_img))) {
+            File::delete(public_path('images/service/' . $slides->desc_img));
         }
 
         $slides->delete();
