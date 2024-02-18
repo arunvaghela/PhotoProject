@@ -3,7 +3,7 @@
 @section('content')
     <!-- Header Banner -->
     <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="3"
-         data-background="img/about2.jpg">
+         data-background="{{asset('assets/img/about2.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 slider-text js-fullheight">
@@ -61,7 +61,7 @@
                 <div class="col-md-5 offset-md-1 animate-box" data-animate-effect="fadeInUp">
                     <div class="img-exp">
                         <div class="about-img">
-                            <div class="img"><img src="img/about.jpg" class="img-fluid" alt=""></div>
+                            <div class="img"><img src="{{asset('assets/img/about.jpg')}}" class="img-fluid" alt=""></div>
                         </div>
                         <div id="circle">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@
             <div class="row">
                 <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <img src="img/team/team1.jpg" alt="">
+                        <img src="{{asset('assets/img/team/team1.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 valign animate-box" data-animate-effect="fadeInRight">
@@ -181,7 +181,7 @@
                 </div>
                 <div class="col-md-6 order1 animate-box" data-animate-effect="fadeInRight">
                     <div class="img">
-                        <img src="img/team/team2.jpg" alt="">
+                        <img src="{{asset('assets/img/team/team2.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
     </section>
     <!-- Testiominals -->
     <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/17.jpg"
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="{{asset('assets/img/slider/17.jpg')}}"
              data-overlay-dark="5">
             <div class="container">
                 <div class="row">
@@ -324,75 +324,6 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Signup -->
-    <section class="signup">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 p-0">
-                    <div class="img left"><img src="img/signup.jpg" alt=""></div>
-                </div>
-                <div class="col-md-6 p-0 valign">
-                    <div class="content">
-                        <div class="cont text-left">
-                            <h6>Sign Up</h6>
-                            <h4>Subscribe to the <span>Newsletter</span></h4>
-                            <p>For the latest inspiration and insider tips straight to your inbox.</p>
-                            <form method="post" class="contact__form"
-                                  action="https://duruthemes.com/demo/html/florya/light/mail.php">
-                                <!-- form message -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-success contact__msg" style="display: none"
-                                             role="alert"> Your message was sent successfully.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- form elements -->
-                                <div class="row">
-                                    <div class="col-md-12 form-group">
-                                        <input name="name" type="text" placeholder="Full Name *" required>
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input name="email" type="email" placeholder="Email Address *" required>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="butn-dark"><span>Subscripe</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients -->
-    <section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/1.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/2.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/3.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/4.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/5.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/6.png" alt=""></a>
-                    </div>
                 </div>
             </div>
         </div>

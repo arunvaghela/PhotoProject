@@ -23,6 +23,9 @@ Route::get('/', [PageController::class, 'home']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/service', [PageController::class, 'service']);
 Route::get('/service/{id}', [PageController::class, 'services'])->name('service');
+Route::get('/portfolio', [PageController::class, 'portfolio']);
+Route::get('/portfolio/{id}', [PageController::class, 'portfolios'])->name('portfolio');
+Route::get('/contact', [PageController::class, 'contact']);
 
 Route::prefix('admin')->group(function () {
     // Define your admin routes here

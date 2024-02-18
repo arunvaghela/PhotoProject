@@ -30,6 +30,8 @@ class PortfolioController extends Controller
             'slider_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'home_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'gallery_image.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'youtube_link' => 'required',
+            'youtube_link1' => 'required',
         ]);
 
         $imageSliderName = time() . 'slider.' . $request->slider_image->extension();
@@ -56,9 +58,21 @@ class PortfolioController extends Controller
                 PortfolioType::create([
                     'p_id' => $portfolio->id,
                     'name' => $imageGalleryName,
-                    'type' => 'V'
+                    'type' => 'I'
                 ]);
                 $i++;
+            }
+        }
+
+        for ($j = 0; $j <= 4; $j++) {
+            $fieldName = ($j == 0) ? "youtube_link" : "youtube_link$j";
+            if ($request->filled($fieldName)) {
+                PortfolioType::create([
+                    'p_id' => $portfolio->id,
+                    'name' => $request->$fieldName,
+                    'type' => 'V',
+                    'youtube_link_count' => $j,
+                ]);
             }
         }
 
@@ -68,8 +82,8 @@ class PortfolioController extends Controller
     public function edit($id)
     {
         $portfolios = Portfolio::findOrFail($id);
-        $portfolioImages = PortfolioType::where('p_id', $id)->where('type', 'V')->get();
-        $portfolioVideos = PortfolioType::where('p_id', $id)->where('type', 'I')->get();
+        $portfolioImages = PortfolioType::where('p_id', $id)->where('type', 'I')->get();
+        $portfolioVideos = PortfolioType::where('p_id', $id)->where('type', 'V')->orderBy('youtube_link_count', 'asc')->get();
         return view('admin.portfolio.edit', compact('portfolios', 'portfolioImages', 'portfolioVideos'));
     }
 
@@ -83,6 +97,8 @@ class PortfolioController extends Controller
             'slider_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'home_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'gallery_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'youtube_link' => 'required',
+            'youtube_link1' => 'required',
         ]);
 
         $portfolios = Portfolio::findOrFail($id);
@@ -114,9 +130,27 @@ class PortfolioController extends Controller
                 PortfolioType::create([
                     'p_id' => $id,
                     'name' => $imageGalleryName,
-                    'type' => 'V'
+                    'type' => 'I'
                 ]);
                 $i++;
+            }
+        }
+
+        for ($j = 0; $j <= 4; $j++) {
+            $fieldName = ($j == 0) ? "youtube_link" : "youtube_link$j";
+            if ($request->filled($fieldName)) {
+                PortfolioType::updateOrCreate(
+                    [
+                        'p_id' => $id,
+                        'youtube_link_count' => $j,
+                        'type' => 'V',
+                    ],
+                    [
+                        'p_id' => $id,
+                        'name' => $request->$fieldName,
+                        'youtube_link_count' => $j,
+                        'type' => 'V',
+                    ]);
             }
         }
 
@@ -139,12 +173,12 @@ class PortfolioController extends Controller
 
         $portfolioImages = PortfolioType::where(['p_id' => $id, 'type' => 'V'])->get();
 
-        foreach ($portfolioImages as $key => $val){
+        foreach ($portfolioImages as $key => $val) {
             if (File::exists(public_path('images/gallery/' . $val->name))) {
                 File::delete(public_path('images/gallery/' . $val->name));
             }
         }
-        PortfolioType::where(['p_id' => $id, 'type' => 'V'])->delete();
+        PortfolioType::where(['p_id' => $id])->delete();
         $portfolios->delete();
 
         return redirect()->route('admin.portfolio')->with('success', 'Portfolio deleted successfully.');

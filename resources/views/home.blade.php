@@ -42,7 +42,7 @@
                         semper neque. In aliquam tristique consectetur. Etiam venenatis lobortis neque, eget
                         sollicitudin erat venenatis sit amet. In interdum odio at nunc pulvinar viverra rutrum id
                         est.</p>
-                    <div class="butn-light mt-15"><a href="about.html"><span>Find out more</span></a></div>
+                    <div class="butn-light mt-15"><a href="javascript:void(0)"><span>Find out more</span></a></div>
                 </div>
             </div>
         </div>
@@ -66,32 +66,36 @@
                     <div class="owl-carousel owl-theme">
                         @forelse($services as $key => $value)
                             <div class="item">
-                                <div class="position-re o-hidden"><img src="{{asset('images/service/' . $value->slider_img)}}" alt="">
+                                <div class="position-re o-hidden"><img
+                                        src="{{asset('images/service/' . $value->slider_img)}}" alt="">
                                 </div>
                                 <div class="con">
                                     <h5><a href="{{ route('service', $value->id) }}">{{ $value->name }}</a></h5>
                                     <div class="line"></div>
                                     <div class="row facilities">
                                         <div class="col-md-12 text-right">
-                                            <div class="permalink"><a href="{{ route('service', $value->id) }}">Explore <i class="ti-arrow-right"></i></a></div>
+                                            <div class="permalink"><a href="{{ route('service', $value->id) }}">Explore
+                                                    <i class="ti-arrow-right"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         @empty
-                        <div class="item">
-                            <div class="position-re o-hidden"><img src="{{url('assets/img/services/1.jpg')}}" alt="">
-                            </div>
-                            <div class="con">
-                                <h5><a href="javascript:void(0)">Wedding <span>Planner</span></a></h5>
-                                <div class="line"></div>
-                                <div class="row facilities">
-                                    <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="javascript:void(0)">Explore <i class="ti-arrow-right"></i></a></div>
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src="{{url('assets/img/services/1.jpg')}}"
+                                                                       alt="">
+                                </div>
+                                <div class="con">
+                                    <h5><a href="javascript:void(0)">Wedding <span>Planner</span></a></h5>
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col-md-12 text-right">
+                                            <div class="permalink"><a href="javascript:void(0)">Explore <i
+                                                        class="ti-arrow-right"></i></a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         @endforelse
                     </div>
                 </div>
@@ -136,7 +140,7 @@
                                         We highly recommend! "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Cynthia & Carl <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>Cynthia & Carl <i>|</i> <span><a href="javascript:void(0)">View the wedding</a></span>
                                             </h6>
                                         </div>
                                     </div>
@@ -152,7 +156,7 @@
                                         We highly recommend! "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Lauren & Wayne <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>Lauren & Wayne <i>|</i> <span><a href="javascript:void(0)">View the wedding</a></span>
                                             </h6>
                                         </div>
                                     </div>
@@ -291,168 +295,62 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/5.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>C & C</h4>
-                                        <h6>Lakewood WA, USA</h6>
-                                    </div>
-                                </div>
-                                <div class="flip-overlay"></div>
-                            </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Cynthia & Carl</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
+                        @forelse($portfolio as $keyp => $valp)
+                            <div class="square-flip">
+                                <div class="square bg-img" data-background="{{ asset('images/portfolio/' . $valp->home_img) }}">
+                                    <div class="square-container d-flex align-items-end justify-content-end">
+                                        <div class="box-title">
+                                            <h4>{{ ucfirst(substr($valp->first_name, 0, 1)) }}
+                                                & {{ ucfirst(substr($valp->last_name, 0, 1)) }}</h4>
                                         </div>
                                     </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
+                                    <div class="flip-overlay"></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/3.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>L & W</h4>
-                                        <h6>Green House, Manhattan</h6>
+                                <div class="square2 bg-green">
+                                    <div class="square-container2">
+                                        <h4>{{ ucfirst($valp->first_name) }} & {{ ucfirst($valp->last_name) }}</h4>
+                                        <p>{!! $valp->short_desc !!}</p>
+                                        <div class="row portfolio-list mb-30">
+                                            <div class="col-md-12">
+                                                <ul>
+                                                    <li>Wedding Planner : Rachel Starletta</li>
+                                                    <li>Photographer : Janet Lewis</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="btn-line"><a href="{{ route('portfolio', $valp->id) }}">Find out more</a></div>
                                     </div>
                                 </div>
-                                <div class="flip-overlay"></div>
                             </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Lauren & Wayne</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
+                        @empty
+                            <div class="square-flip">
+                                <div class="square bg-img" data-background="{{url('assets/img/couple/3.jpg')}}">
+                                    <div class="square-container d-flex align-items-end justify-content-end">
+                                        <div class="box-title">
+                                            <h4>L & W</h4>
+                                            <h6>Green House, Manhattan</h6>
                                         </div>
                                     </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
+                                    <div class="flip-overlay"></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/4.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>H & H</h4>
-                                        <h6>Level Park, Oxfordshire</h6>
-                                    </div>
-                                </div>
-                                <div class="flip-overlay"></div>
-                            </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Heather & Henry</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
+                                <div class="square2 bg-green">
+                                    <div class="square-container2">
+                                        <h4>Lauren & Wayne</h4>
+                                        <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
+                                            natoque enatibus et dis monte.</p>
+                                        <div class="row portfolio-list mb-30">
+                                            <div class="col-md-12">
+                                                <ul>
+                                                    <li>Wedding Planner : Rachel Starletta</li>
+                                                    <li>Photographer : Janet Lewis</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/2.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>E & M</h4>
-                                        <h6>Gold Park CA, USA</h6>
+                                        <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
                                     </div>
                                 </div>
-                                <div class="flip-overlay"></div>
                             </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Emily & Micheal</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/1.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>S & R</h4>
-                                        <h6>Silver Park, Oxfordshire</h6>
-                                    </div>
-                                </div>
-                                <div class="flip-overlay"></div>
-                            </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Sophia & Robert</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="square-flip">
-                            <div class="square bg-img" data-background="{{url('assets/img/couple/6.jpg')}}">
-                                <div class="square-container d-flex align-items-end justify-content-end">
-                                    <div class="box-title">
-                                        <h4>O & J</h4>
-                                        <h6>Blue House, London</h6>
-                                    </div>
-                                </div>
-                                <div class="flip-overlay"></div>
-                            </div>
-                            <div class="square2 bg-green">
-                                <div class="square-container2">
-                                    <h4>Olivia & John</h4>
-                                    <p>Lorem nissuam nestibulum duru quam the odion elementum ceisue the misse varie
-                                        natoque enatibus et dis monte.</p>
-                                    <div class="row portfolio-list mb-30">
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li>Wedding Planner : Rachel Starletta</li>
-                                                <li>Photographer : Janet Lewis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="btn-line"><a href="portfolio-page.html">Find out more</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforelse
                     </div>
                 </div>
             </div>
@@ -541,7 +439,7 @@
                                     <li><i class="ti-check"></i> Wedding stylist</li>
                                     <li><i class="ti-check"></i> Wedding advice</li>
                                 </ul>
-                                <div class="butn-light mt-30"><a href="#"><span>See More</span></a></div>
+                                <div class="butn-light mt-30"><a href="javascript:void(0)"><span>See More</span></a></div>
                             </div>
                         </div>
                     </div>

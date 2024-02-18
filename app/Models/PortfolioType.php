@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class PortfolioType extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'p_id', 'name', 'type'];
+    protected $fillable = ['id', 'p_id', 'name', 'type', 'youtube_link_count'];
 }

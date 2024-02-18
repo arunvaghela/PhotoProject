@@ -25,7 +25,7 @@
                     <form method="post" action="{{ route('admin.store')  }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Image</label>
+                            <label for="formFile" class="form-label">Image <span style="color: red;">*</span></label>
                             <input class="form-control bg-dark" type="file" name="image" id="formFile" required>
                         </div>
                         <div class="mb-3 form-check form-check-inline">

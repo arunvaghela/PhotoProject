@@ -21,7 +21,7 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
-                            <label for="name" class="form-label">Service Name</label>
+                            <label for="name" class="form-label">Service Name <span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Service Name"
                                    value="{{ $services->name }}" required>
                         </div>
@@ -38,13 +38,13 @@
                                  alt="{{ $services->desc_img }}" style="max-width: 100px;">
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Short Description</label>
+                            <label for="formFile" class="form-label">Short Description <span style="color: red;">*</span></label>
                             <textarea class="form-control" placeholder="Short Description" name="short_desc"
                                       id="short_desc"
                                       style="height: 150px;">{{ $services->short_desc }}</textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Long Description</label>
+                            <label for="formFile" class="form-label">Long Description <span style="color: red;">*</span></label>
                             <textarea class="form-control" placeholder="Long Description" name="long_desc"
                                       id="long_desc"
                                       style="height: 150px;">{{ $services->long_desc }}</textarea>

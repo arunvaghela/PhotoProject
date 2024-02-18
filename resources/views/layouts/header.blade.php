@@ -49,34 +49,8 @@
                 <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/service')}}">Services</a></li>
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Portfolio <i class="ti-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="portfolio-grid.html" class="dropdown-item"><span>Portfolio Grid</span></a></li>
-                        <li><a href="portfolio-masonry.html" class="dropdown-item"><span>Portfolio Masonry</span></a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Blog <i class="ti-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="blog-2-column.html" class="dropdown-item"><span>Blog 2 Column</span></a></li>
-                        <li><a href="blog-right-sidebar.html" class="dropdown-item"><span>Blog Right Sidebar</span></a></li>
-                        <li><a href="blog-left-sidebar.html" class="dropdown-item"><span>Blog Left Sidebar</span></a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="ti-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services-page.html" class="dropdown-item"><span>Services Details</span></a></li>
-                        <li><a href="portfolio-page.html" class="dropdown-item"><span>Portfolio Page</span></a></li>
-                        <li><a href="post.html" class="dropdown-item"><span>Post Single</span></a></li>
-                        <li class="dropdown-submenu dropdown"> <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#"><span>Other Pages <i class="ti-angle-right"></i></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="coming-soon.html" class="dropdown-item"><span>Coming Soon</span></a></li>
-                                <li><a href="404.html" class="dropdown-item"><span>404 Error</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/portfolio')}}">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/contact')}}">Contact</a></li>
             </ul>
         </div>
     </div>

@@ -17,9 +17,10 @@ class CreatePortfoliosTable extends Migration
             $table->id();
             $table->string('first_name', 256);
             $table->string('last_name', 256);
-            $table->longText('img');
+            $table->longText('home_img');
+            $table->longText('slide_img');
             $table->longText('short_desc');
-            $table->longText('long_desc');
+            $table->enum('is_active', ['Y', 'N'])->default('Y');
             $table->timestamps();
         });
     }

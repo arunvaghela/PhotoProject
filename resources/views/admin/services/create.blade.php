@@ -25,23 +25,23 @@
                     <form method="post" action="{{ route('admin.services.store')  }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="name" class="form-label">Service Name</label>
+                            <label for="name" class="form-label">Service Name <span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Service Name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Slider Image</label>
+                            <label for="formFile" class="form-label">Slider Image <span style="color: red;">*</span></label>
                             <input class="form-control bg-dark" type="file" name="slider_image" id="formFile" required>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Description Image</label>
+                            <label for="formFile" class="form-label">Description Image <span style="color: red;">*</span></label>
                             <input class="form-control bg-dark" type="file" name="desc_image" id="formFile" required>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Short Description</label>
+                            <label for="formFile" class="form-label">Short Description <span style="color: red;">*</span></label>
                             <textarea class="form-control" placeholder="Short Description" name="short_desc" id="short_desc" style="height: 500px;"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Long Description</label>
+                            <label for="formFile" class="form-label">Long Description <span style="color: red;">*</span></label>
                             <textarea class="form-control" placeholder="Long Description" name="long_desc" id="long_desc" style="height: 500px;"></textarea>
                         </div>
                         <div class="mb-3 form-check form-check-inline">

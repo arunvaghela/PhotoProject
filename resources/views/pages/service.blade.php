@@ -3,7 +3,7 @@
 @section('content')
     <!-- Header Banner -->
     <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="3"
-         data-background="img/slider/1.jpg">
+         data-background="{{asset('assets/img/slider/1.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 slider-text js-fullheight">
@@ -49,13 +49,13 @@
                 @empty
                     <div class="col-md-4">
                         <div class="item">
-                            <div class="position-re o-hidden"><img src="img/services/4.jpg" alt=""></div>
+                            <div class="position-re o-hidden"><img src="{{asset('assets/img/services/4.jpg')}}" alt=""></div>
                             <div class="con">
-                                <h5><a href="services-page.html">Corporate <span>Events</span></a></h5>
+                                <h5><a href="/">Corporate <span>Events</span></a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
                                     <div class="col-md-12 text-right">
-                                        <div class="permalink"><a href="services-page.html">Explore <i
+                                        <div class="permalink"><a href="/">Explore <i
                                                     class="ti-arrow-right"></i></a></div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
     </section>
     <!-- Testiominals -->
     <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/17.jpg"
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="{{asset('assets/img/slider/17.jpg')}}"
              data-overlay-dark="5">
             <div class="container">
                 <div class="row">
@@ -87,7 +87,7 @@
                                         couple. We highly recommend! "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Emily & Enrico <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>Emily & Enrico <i>|</i> <span><a href="/">View the wedding</a></span>
                                             </h6>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
                                         We highly recommend! "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Cynthia & Carl <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>Cynthia & Carl <i>|</i> <span><a href="/">View the wedding</a></span>
                                             </h6>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@
                                         We highly recommend! "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Lauren & Wayne <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>Lauren & Wayne <i>|</i> <span><a href="/">View the wedding</a></span>
                                             </h6>
                                         </div>
                                     </div>
@@ -203,75 +203,6 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Signup -->
-    <section class="signup">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 p-0">
-                    <div class="img left"><img src="img/signup.jpg" alt=""></div>
-                </div>
-                <div class="col-md-6 p-0 valign">
-                    <div class="content">
-                        <div class="cont text-left">
-                            <h6>Sign Up</h6>
-                            <h4>Subscribe to the <span>Newsletter</span></h4>
-                            <p>For the latest inspiration and insider tips straight to your inbox.</p>
-                            <form method="post" class="contact__form"
-                                  action="https://duruthemes.com/demo/html/florya/light/mail.php">
-                                <!-- form message -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-success contact__msg" style="display: none"
-                                             role="alert"> Your message was sent successfully.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- form elements -->
-                                <div class="row">
-                                    <div class="col-md-12 form-group">
-                                        <input name="name" type="text" placeholder="Full Name *" required>
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input name="email" type="email" placeholder="Email Address *" required>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="butn-dark"><span>Subscripe</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients -->
-    <section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/1.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/2.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/3.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/4.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/5.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="img/clients/6.png" alt=""></a>
-                    </div>
                 </div>
             </div>
         </div>
