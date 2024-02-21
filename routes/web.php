@@ -29,26 +29,27 @@ Route::get('/contact', [PageController::class, 'contact']);
 
 Route::prefix('admin')->group(function () {
     // Define your admin routes here
+    Auth::routes();
 
-    Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
-    Route::get('create', [SliderController::class, 'create'])->name('admin.create');
-    Route::post('store', [SliderController::class, 'store'])->name('admin.store');
-    Route::get('{id}/edit', [SliderController::class, 'edit'])->name('admin.edit');
-    Route::put('{id}', [SliderController::class, 'update'])->name('admin.update');
-    Route::delete('{id}', [SliderController::class, 'destroy'])->name('admin.destroy');
+    Route::get('/', [SliderController::class, 'index'])->middleware('auth')->name('admin.slider');
+    Route::get('create', [SliderController::class, 'create'])->middleware('auth')->name('admin.create');
+    Route::post('store', [SliderController::class, 'store'])->middleware('auth')->name('admin.store');
+    Route::get('{id}/edit', [SliderController::class, 'edit'])->middleware('auth')->name('admin.edit');
+    Route::put('{id}', [SliderController::class, 'update'])->middleware('auth')->name('admin.update');
+    Route::delete('{id}', [SliderController::class, 'destroy'])->middleware('auth')->name('admin.destroy');
 
-    Route::get('/services', [ServiceController::class, 'index'])->name('admin.services');
-    Route::get('/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
-    Route::post('/services/store', [ServiceController::class, 'store'])->name('admin.services.store');
-    Route::get('/services/{id}/edit', [ServiceController::class, 'edit'])->name('admin.services.edit');
-    Route::put('/services/{id}', [ServiceController::class, 'update'])->name('admin.services.update');
-    Route::delete('/services/{id}', [ServiceController::class, 'destroy'])->name('admin.services.destroy');
+    Route::get('/services', [ServiceController::class, 'index'])->middleware('auth')->name('admin.services');
+    Route::get('/services/create', [ServiceController::class, 'create'])->middleware('auth')->name('admin.services.create');
+    Route::post('/services/store', [ServiceController::class, 'store'])->middleware('auth')->name('admin.services.store');
+    Route::get('/services/{id}/edit', [ServiceController::class, 'edit'])->middleware('auth')->name('admin.services.edit');
+    Route::put('/services/{id}', [ServiceController::class, 'update'])->middleware('auth')->name('admin.services.update');
+    Route::delete('/services/{id}', [ServiceController::class, 'destroy'])->middleware('auth')->name('admin.services.destroy');
 
-    Route::get('/portfolio', [PortfolioController::class, 'index'])->name('admin.portfolio');
-    Route::get('/portfolio/create', [PortfolioController::class, 'create'])->name('admin.portfolio.create');
-    Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('admin.portfolio.store');
-    Route::get('/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolio.edit');
-    Route::put('/portfolio/{id}', [PortfolioController::class, 'update'])->name('admin.portfolio.update');
-    Route::delete('/portfolio/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolio.destroy');
+    Route::get('/portfolio', [PortfolioController::class, 'index'])->middleware('auth')->name('admin.portfolio');
+    Route::get('/portfolio/create', [PortfolioController::class, 'create'])->middleware('auth')->name('admin.portfolio.create');
+    Route::post('/portfolio/store', [PortfolioController::class, 'store'])->middleware('auth')->name('admin.portfolio.store');
+    Route::get('/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->middleware('auth')->name('admin.portfolio.edit');
+    Route::put('/portfolio/{id}', [PortfolioController::class, 'update'])->middleware('auth')->name('admin.portfolio.update');
+    Route::delete('/portfolio/{id}', [PortfolioController::class, 'destroy'])->middleware('auth')->name('admin.portfolio.destroy');
 
 });

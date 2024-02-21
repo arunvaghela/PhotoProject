@@ -63,9 +63,9 @@
                 </div>
             </div>
             <div class="navbar-nav w-100">
-                <a href="{{ url('/admin') }}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Sliders</a>
-                <a href="{{ url('/admin/services') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Services</a>
-                <a href="{{ url('/admin/portfolio') }}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Portfolio</a>
+                <a href="{{ url('/admin') }}" class="nav-item nav-link {{ (request()->is('/admin') || request()->is('/admin/create') || request()->segment(3) == 'edit' )  ? 'active' : '' }} "><i class="fa fa-tachometer-alt me-2"></i>Sliders</a>
+                <a href="{{ url('/admin/services') }}" class="nav-item nav-link {{ (request()->segment(2) == 'services') ? 'active' : '' }} "><i class="fa fa-th me-2"></i>Services</a>
+                <a href="{{ url('/admin/portfolio') }}" class="nav-item nav-link {{ (request()->segment(2) == 'portfolio') ? 'active' : '' }} "><i class="fa fa-keyboard me-2"></i>Portfolio</a>
 
             </div>
         </nav>
@@ -93,9 +93,12 @@
                         <span class="d-none d-lg-inline-flex">Admin</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">My Profile</a>
-                        <a href="#" class="dropdown-item">Settings</a>
-                        <a href="#" class="dropdown-item">Log Out</a>
+                        {{--<a href="#" class="dropdown-item">My Profile</a>
+                        <a href="#" class="dropdown-item">Settings</a>--}}
+                        <form action="{{ url('/admin/logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item" type="submit"> Logout </button>
+                        </form>
                     </div>
                 </div>
             </div>
