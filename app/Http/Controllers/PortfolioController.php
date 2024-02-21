@@ -109,7 +109,7 @@ class PortfolioController extends Controller
             $portfolios->slide_img = $imageSliderName;
         }
 
-        if ($request->hasFile('slider_image')) {
+        if ($request->hasFile('home_image')) {
             $imageHomeName = time() . 'home.' . $request->home_image->extension();
             $request->home_image->move(public_path('images/portfolio'), $imageHomeName);
             $portfolios->home_img = $imageHomeName;
