@@ -18,7 +18,7 @@ class CreatePortfolioTypesTable extends Migration
             $table->integer('p_id');
             $table->longText('name');
             $table->enum('type', ['I', 'V']);
-            $table->integer('youtube_link_count', 11)->default(0)->nullable();
+            $table->integer('youtube_link_count', false)->default(0)->nullable();
             $table->timestamps();
         });
     }

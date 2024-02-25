@@ -40,7 +40,7 @@
     </section>
     <!-- Promo Video -->
     <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="4"
-             data-background="img/slider/15.jpg">
+             data-background="{{asset('assets/img/slider/15.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="text-center col-md-12">
-                    <a class="vid" href="https://youtu.be/4hCOTCCTThs">
+                    <a class="vid" href="{{ $portfolios->home_Video_link }}">
                         <div class="vid-butn"> <span class="icon">
                                 <i class="ti-control-play"></i>
                             </span>

@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminContactMail;
+use App\Mail\CustomerContactMail;
 use App\Models\Portfolio;
 use App\Models\PortfolioType;
 use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
     public function home()
     {
         $slides = Slider::all();
-        if($slides->isNotEmpty() && $slides->count() > 3){
+        if ($slides->isNotEmpty() && $slides->count() > 3) {
             $slides->random(3);
         }
 
@@ -24,7 +27,7 @@ class PageController extends Controller
         $services = Service::all();
 
         $portfolio = Portfolio::all();
-        if($portfolio->isNotEmpty() && $portfolio->count() > 6){
+        if ($portfolio->isNotEmpty() && $portfolio->count() > 6) {
             $portfolio->random(6);
         }
 
@@ -35,6 +38,7 @@ class PageController extends Controller
     {
         return view('pages.about');
     }
+
     public function service()
     {
         $allServices = Service::all();
@@ -65,5 +69,16 @@ class PageController extends Controller
     public function contact()
     {
         return view('pages.contact');
+    }
+
+    public function sendmail(Request $request)
+    {
+        // send email customer
+        Mail::to($request->input('email'))->send(new CustomerContactMail($request->all()));
+
+        // Send email to admin
+        Mail::to('arund2d.405@gmail.com')->send(new AdminContactMail($request->all()));
+
+        return redirect()->back()->with('success', 'Your message has been sent!');
     }
 }

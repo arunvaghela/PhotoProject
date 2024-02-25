@@ -20,6 +20,7 @@ class CreatePortfoliosTable extends Migration
             $table->longText('home_img');
             $table->longText('slide_img');
             $table->longText('short_desc');
+            $table->longText('home_Video_link');
             $table->enum('is_active', ['Y', 'N'])->default('Y');
             $table->timestamps();
         });

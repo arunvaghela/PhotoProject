@@ -62,14 +62,10 @@
                                    required multiple>
                         </div>
 
-                        <div class="mb-3 form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="active" id="active" value="Y" checked
-                                   required>
-                            <label class="form-check-label" for="active">Active</label>
-                        </div>
-                        <div class=" mb-3 form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="active" id="deactive" value="N" required>
-                            <label class="form-check-label" for="deactive">DeActive</label>
+                        <div class="mb-3 col-md-11">
+                            <label for="home_Video_link" class="form-label">Home Video Link <span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="home_Video_link" name="home_Video_link"
+                                   placeholder="Home Video Link" required>
                         </div>
 
                         <div class="mb-3 col-md-11">
@@ -97,6 +93,17 @@
                             <input type="text" class="form-control" id="youtube_link4" name="youtube_link4"
                                    placeholder="YouTube Link 4" >
                         </div>
+
+                        <div class="mb-3 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="active" id="active" value="Y" checked
+                                   required>
+                            <label class="form-check-label" for="active">Active</label>
+                        </div>
+                        <div class=" mb-3 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="active" id="deactive" value="N" required>
+                            <label class="form-check-label" for="deactive">DeActive</label>
+                        </div>
+
                         <div class=" mb-3">
                             <button type="submit" class="btn btn-primary">Add</button>
                         </div>

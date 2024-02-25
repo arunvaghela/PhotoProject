@@ -32,6 +32,7 @@ class PortfolioController extends Controller
             'gallery_image.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'youtube_link' => 'required',
             'youtube_link1' => 'required',
+            'home_Video_link' => 'required',
         ]);
 
         $imageSliderName = time() . 'slider.' . $request->slider_image->extension();
@@ -46,7 +47,8 @@ class PortfolioController extends Controller
             'is_active' => $request->active,
             'slide_img' => $imageSliderName,
             'home_img' => $imageHomeName,
-            'short_desc' => $request->short_desc
+            'short_desc' => $request->short_desc,
+            'home_Video_link' => $request->home_Video_link
         ]);
 
         if ($request->hasFile('gallery_image')) {
@@ -99,6 +101,7 @@ class PortfolioController extends Controller
             'gallery_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'youtube_link' => 'required',
             'youtube_link1' => 'required',
+            'home_Video_link' => 'required',
         ]);
 
         $portfolios = Portfolio::findOrFail($id);
@@ -118,7 +121,7 @@ class PortfolioController extends Controller
         $portfolios->last_name = $request->last_name;
         $portfolios->is_active = $request->active;
         $portfolios->short_desc = $request->short_desc;
-
+        $portfolios->home_Video_link = $request->home_Video_link;
         $portfolios->save();
 
         if ($request->hasFile('gallery_image')) {

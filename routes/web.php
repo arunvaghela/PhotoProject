@@ -26,6 +26,7 @@ Route::get('/service/{id}', [PageController::class, 'services'])->name('service'
 Route::get('/portfolio', [PageController::class, 'portfolio']);
 Route::get('/portfolio/{id}', [PageController::class, 'portfolios'])->name('portfolio');
 Route::get('/contact', [PageController::class, 'contact']);
+Route::post('/sendmail', [PageController::class, 'sendmail'])->name('sendmail');;
 
 Route::prefix('admin')->group(function () {
     // Define your admin routes here

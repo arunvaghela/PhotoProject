@@ -297,7 +297,8 @@
                     <div class="owl-carousel owl-theme">
                         @forelse($portfolio as $keyp => $valp)
                             <div class="square-flip">
-                                <div class="square bg-img" data-background="{{ asset('images/portfolio/' . $valp->home_img) }}">
+                                <div class="square bg-img"
+                                     data-background="{{ asset('images/portfolio/' . $valp->home_img) }}">
                                     <div class="square-container d-flex align-items-end justify-content-end">
                                         <div class="box-title">
                                             <h4>{{ ucfirst(substr($valp->first_name, 0, 1)) }}
@@ -318,7 +319,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="btn-line"><a href="{{ route('portfolio', $valp->id) }}">Find out more</a></div>
+                                        <div class="btn-line"><a href="{{ route('portfolio', $valp->id) }}">Find out
+                                                more</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -387,12 +389,12 @@
                 <div class="col-md-6 p-0 valign">
                     <div class="content">
                         <div class="cont text-left">
-                            <h6>Sign Up</h6>
-                            <h4>Subscribe to the <span>Newsletter</span></h4>
-                            <p>For the latest inspiration and insider tips straight to your inbox.</p>
-                            <form method="post" class="contact__form"
-                                  action="https://duruthemes.com/demo/html/florya/light/mail.php">
-                                <!-- form message -->
+                            <h4>Get in touch</h4>
+                            <p>Ask me a question, I'd love to hear more from you.</p>
+                            <form action="{{ route('sendmail') }}" class="contact__form" method="post">
+                            @csrf
+
+                            <!-- form message -->
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="alert alert-success contact__msg" style="display: none"
@@ -400,16 +402,27 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- form elements -->
                                 <div class="row">
-                                    <div class="col-md-12 form-group">
-                                        <input name="name" type="text" placeholder="Full Name *" required>
+                                    <div class="col-md-6 form-group">
+                                        <input name="name" type="text" placeholder="Your Name *" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="email" type="email" placeholder="Your Email *" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="phone" type="text" placeholder="Your Number *" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="subject" type="text" placeholder="Subject *" required>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <input name="email" type="email" placeholder="Email Address *" required>
+                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *"
+                                          required></textarea>
                                     </div>
-                                    <div class="col-md-12">
-                                        <button class="butn-dark"><span>Subscripe</span></button>
+                                    <div class="col-md-12 mt-15">
+                                        <button class="butn-dark" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </form>

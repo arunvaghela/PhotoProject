@@ -108,7 +108,7 @@ $(function () {
     });
 
     // YouTubePopUp
-    $("a.vid").YouTubePopUp();
+    $("a.vid").YouTubePopUp({ autoplay: 1 });
 
     // Testimonials owlCarousel *
     $('.testimonials .owl-carousel').owlCarousel({

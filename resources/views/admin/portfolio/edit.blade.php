@@ -16,67 +16,76 @@
             <div class="col-sm-12 col-xl-9">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Edit Slider</h6>
-                    <form method="post" action="{{ route('admin.portfolio.update', $portfolios->id) }}" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('admin.portfolio.update', $portfolios->id) }}"
+                          enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="row">
                             <div class="mb-3 col-md-6">
-                                <label for="name" class="form-label">First Name <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" value="{{$portfolios->first_name}}" required>
+                                <label for="name" class="form-label">First Name <span
+                                        style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="first_name" name="first_name"
+                                       placeholder="First Name" value="{{$portfolios->first_name}}" required>
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="name" class="form-label">Last Name <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" value="{{ $portfolios->last_name }}" required>
+                                <label for="name" class="form-label">Last Name <span
+                                        style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="last_name" name="last_name"
+                                       placeholder="Last Name" value="{{ $portfolios->last_name }}" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label for="formFile" class="form-label">Slider Image</label>
-                                <input class="form-control bg-dark" type="file" name="slider_image" id="slider_image" >
+                                <input class="form-control bg-dark" type="file" name="slider_image" id="slider_image">
                                 <img src="{{ asset('images/portfolio/' . $portfolios->slide_img) }}"
                                      alt="{{ $portfolios->slide_img }}" style="max-width: 100px;">
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="formFile" class="form-label">Home Image</label>
-                                <input class="form-control bg-dark" type="file" name="home_image" id="home_image" >
+                                <input class="form-control bg-dark" type="file" name="home_image" id="home_image">
                                 <img src="{{ asset('images/portfolio/' . $portfolios->home_img) }}"
                                      alt="{{ $portfolios->home_img }}" style="max-width: 100px;">
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Short Description <span style="color: red;">*</span></label>
-                            <textarea class="form-control" placeholder="Short Description" name="short_desc" id="short_desc" style="height: 500px;">{{ $portfolios->short_desc }}</textarea>
+                            <label for="formFile" class="form-label">Short Description <span
+                                    style="color: red;">*</span></label>
+                            <textarea class="form-control" placeholder="Short Description" name="short_desc"
+                                      id="short_desc" style="height: 500px;">{{ $portfolios->short_desc }}</textarea>
                         </div>
 
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Gallery Images</label>
-                            <input class="form-control bg-dark" type="file" name="gallery_image[]" id="gallery_image"  multiple>
+                            <input class="form-control bg-dark" type="file" name="gallery_image[]" id="gallery_image"
+                                   multiple>
                             <div class="mr-5">
-                            @forelse($portfolioImages as $keyI => $valI)
-                                <img src="{{ asset('images/gallery/' . $valI->name) }}" alt="{{ $valI->name }}" style="max-width: 100px; margin-right:5px;">
-                            @empty
-                            @endforelse
+                                @forelse($portfolioImages as $keyI => $valI)
+                                    <img src="{{ asset('images/gallery/' . $valI->name) }}" alt="{{ $valI->name }}"
+                                         style="max-width: 100px; margin-right:5px;">
+                                @empty
+                                @endforelse
                             </div>
                         </div>
 
-                        <div class="mb-3 form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="active" id="active" value="Y" @if ($portfolios->is_active == 'Y')checked @endif>
-                            <label class="form-check-label" for="active">Active</label>
-                        </div>
-                        <div class=" mb-3 form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="active" id="deactive" value="N" @if ($portfolios->is_active == 'N')checked @endif>
-                            <label class="form-check-label" for="deactive">DeActive</label>
+                        <div class="mb-3 col-md-11">
+                            <label for="home_Video_link" class="form-label">Home Video Link <span
+                                    style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="home_Video_link" name="home_Video_link"
+                                   placeholder="Home Video Link" value="{{ $portfolios->home_Video_link??'' }}" required>
                         </div>
 
                         <div class="mb-3 col-md-11">
-                            <label for="youtube_link" class="form-label">Youtube Links <span style="color: red;">*</span></label>
+                            <label for="youtube_link" class="form-label">Youtube Links <span
+                                    style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="youtube_link" name="youtube_link"
                                    placeholder="YouTube Link" required value="{{ $portfolioVideos[0]->name??'' }}">
                         </div>
                         <div class="mb-3 col-md-11">
-                            <label for="youtube_link1" class="form-label">Youtube Links 1 <span style="color: red;">*</span></label>
+                            <label for="youtube_link1" class="form-label">Youtube Links 1 <span
+                                    style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="youtube_link1" name="youtube_link1"
                                    placeholder="YouTube Link" required value="{{ $portfolioVideos[1]->name??'' }}">
                         </div>
@@ -94,6 +103,17 @@
                             <label for="youtube_link4" class="form-label">Youtube Links 4</label>
                             <input type="text" class="form-control" id="youtube_link4" name="youtube_link4"
                                    placeholder="YouTube Link" value="{{ $portfolioVideos[4]->name??'' }}">
+                        </div>
+
+                        <div class="mb-3 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="active" id="active" value="Y"
+                                   @if ($portfolios->is_active == 'Y')checked @endif>
+                            <label class="form-check-label" for="active">Active</label>
+                        </div>
+                        <div class=" mb-3 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="active" id="deactive" value="N"
+                                   @if ($portfolios->is_active == 'N')checked @endif>
+                            <label class="form-check-label" for="deactive">DeActive</label>
                         </div>
 
                         <div class=" mb-3">
