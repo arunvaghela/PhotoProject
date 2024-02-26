@@ -10,10 +10,10 @@
                         <div class="col-md-6 slider-text js-fullheight">
                             <div class="slider-text-inner">
                                 <div class="desc">
-                                    <h4>Dream Maker</h4>
+                                    <h4>AREION PRODUCTIONS</h4>
                                     <h1>Wedding & Event Planner For Colorful Couples</h1>
-                                    <p>We would love to meet up and chat about how we can make <span>your dream</span>
-                                        wedding happen!</p>
+                                    <p>We love the opportunity to get together and discuss how we can make your dream
+                                        wedding a reality.</p>
                                 </div>
                             </div>
                         </div>
@@ -23,26 +23,22 @@
         </div>
     </aside>
 
-    <!-- About Florya Weddings -->
+    <!-- About Areion Productions -->
     <section class="about section-padding bg-green">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle white">What we do</div>
                     <div class="section-title white">A wedding that is <span class="white">True</span> as you are!</div>
-                    <p>We would love to meet up and chat about how we can make your dream wedding happen! Nullam
-                        vestibulum iaculis maximus. International facilisis leo at ac tristique nunc vulputate.</p>
+                    {{--<p>We would love to meet up and chat about how we can make your dream wedding happen! Nullam
+                        vestibulum iaculis maximus. International facilisis leo at ac tristique nunc vulputate.</p>--}}
                 </div>
                 <div class="col-md-6 offset-md-1 mt-30 animate-box" data-animate-effect="fadeInUp">
-                    <p>Nullam vestibulum iaculis maximus. In facilisis leo at leo convallis, ac tristique nunc
-                        vulputate. Maecenas volutpat molestie purus eu tempus. Mauris daisen aliquet augue, id aliquam
-                        enim faucibus aucton.</p>
-                    <p>Maecenas volutpat molestie purus eu tempus. Mauris dapibus aliquet augue, id aliquam enim
-                        faucibus auctor. Vestibulum eget dui quis tortor mollis tempor quis non turpis. Donec eget
-                        semper neque. In aliquam tristique consectetur. Etiam venenatis lobortis neque, eget
-                        sollicitudin erat venenatis sit amet. In interdum odio at nunc pulvinar viverra rutrum id
-                        est.</p>
-                    <div class="butn-light mt-15"><a href="javascript:void(0)"><span>Find out more</span></a></div>
+                    <p>Providing luxurious corporate events and providing affordable premium event planning,
+                        photography, and videography services are our areas of expertise at Areion Productions. Our
+                        specialty is creating unforgettable events that your guests won't soon forget. Our committed
+                        crew goes above and beyond to make sure your event is stress-free and unforgettable.</p>
+                    <div class="butn-light mt-15"><a href="{{ url('/about') }}"><span>Find out more</span></a></div>
                 </div>
             </div>
         </div>
@@ -56,9 +52,10 @@
                     <div class="section-title">Explore <span>Services</span></div>
                 </div>
                 <div class="col-md-7 mb-30">
-                    <p>Professional Wedding & Event Planner surabit aliquet orci elit gene tristisue in lorem dream
-                        vitae alisuam tincidunt felis sed gravida aliquam nemue libero hendrerit magna sit amenta the
-                        mollis lacus huam maurisine alisuam erat volutfat.</p>
+                    <p>As a professional Wedding and Event Planner, I specialize in creating memorable experiences. With
+                        a great eye for detail and a desire for perfection, I make fantasies a reality. Lorem, dolor sit
+                        amet, consectetur adipiscing elit. Cras tristique lorem vitae consectetur. Sed gravida aliquam
+                        libero, hendrerit magna. Duis lacus quis mauris aliquam, sed erat volutpat.</p>
                 </div>
             </div>
             <div class="row">
@@ -174,31 +171,31 @@
             <div class="row">
                 <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle">About Us</div>
-                    <div class="section-title">Florya <span>Weddings</span></div>
-                    <p>You can choose any country with good tourism wedding elementum sesue the aucan vestibulum aliquam
-                        justo in sapien rutrum volutpat. Donec in quis the pellentesque velit florya id velit ac arcu
-                        posuere blane.</p>
-                    <p>Wedding nissuam nestibulum ac quam nec odio elementum ceisue the miss varius natoque penatibus et
-                        magnis dis parturient monte.</p>
+                    <div class="section-title">Areion <span>Productions</span></div>
+                    <p>Any nation well-known for its travel and wedding-related attractions may be your choice. A
+                        well-rounded travel destination with a range of experiences should ideally have a rich fusion of
+                        natural beauty and cultural appeal. Think of locations that offer a once-in-a-lifetime wedding
+                        experience amid stunning scenery and a diverse range of cultures as you research your
+                        alternatives.</p>
                     <ul class="list-unstyled about-list mb-30">
                         <li>
                             <div class="about-list-icon"><span class="ti-check"></span></div>
                             <div class="about-list-text">
-                                <p>20 Years of Experience</p>
+                                <p>5+ Years of Experience</p>
                             </div>
                         </li>
                         <li>
                             <div class="about-list-icon"><span class="ti-check"></span></div>
                             <div class="about-list-text">
-                                <p>250+ Wedding Planner</p>
+                                <p>99+ Wedding Planner</p>
                             </div>
                         </li>
                     </ul>
                     <hr class="border">
-                    <div class="about-bottom"><img src="{{url('assets/img/signature-dark.svg')}}" alt=""
-                                                   class="image about-signature">
+                    <div class="about-bottom">
+                        {{--<img src="{{url('assets/img/signature-dark.svg')}}" alt="" class="image about-signature">--}}
                         <div class="about-name-wrapper">
-                            <div class="about-name">Samantha Megan</div>
+                            <div class="about-name">Areion Productions</div>
                             <div class="about-rol">Wedding Planner</div>
                         </div>
                     </div>
@@ -220,7 +217,7 @@
                                 <g>
                                     <use xlink:href="#circlePath" fill="none"/>
                                     <text fill="#575c57">
-                                        <textPath xlink:href="#circlePath"> . florya weddings . planner</textPath>
+                                        <textPath xlink:href="#circlePath"> . areion productions . planner</textPath>
                                     </text>
                                 </g>
                             </svg>
@@ -281,6 +278,46 @@
                     </table>
                 </div>
             </div>
+            {{--<div class="row">
+            <ol class="ps-timeline">
+                <li>
+                    <div class="img-handler-top">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png" alt=""/>
+                    </div>
+                    <div class="ps-bot">
+                        <p>Do you have a recent injury or long term pain?</p>
+                    </div>
+                    <span class="ps-sp-top">01</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_13.png" alt=""/>
+                    </div>
+                    <div class="ps-top">
+                        <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                    </div>
+                    <span class="ps-sp-bot">02</span>
+                </li>
+                <li>
+                    <div class="img-handler-top">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_05.png" alt=""/>
+                    </div>
+                    <div class="ps-bot">
+                        <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                    </div>
+                    <span class="ps-sp-top">03</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_10.png" alt=""/>
+                    </div>
+                    <div class="ps-top">
+                        <p>Join our happy family of pain free clients.</p>
+                    </div>
+                    <span class="ps-sp-bot">04</span>
+                </li>
+            </ol>
+            </div>--}}
         </div>
     </section>
     <!-- Portfolio -->
@@ -311,14 +348,14 @@
                                     <div class="square-container2">
                                         <h4>{{ ucfirst($valp->first_name) }} & {{ ucfirst($valp->last_name) }}</h4>
                                         <p>{!! $valp->short_desc !!}</p>
-                                        <div class="row portfolio-list mb-30">
+                                        {{--<div class="row portfolio-list mb-30">
                                             <div class="col-md-12">
                                                 <ul>
                                                     <li>Wedding Planner : Rachel Starletta</li>
                                                     <li>Photographer : Janet Lewis</li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div>--}}
                                         <div class="btn-line"><a href="{{ route('portfolio', $valp->id) }}">Find out
                                                 more</a></div>
                                     </div>
@@ -433,7 +470,7 @@
         </div>
     </section>
     <!-- Clients -->
-    <section class="clients">
+    {{--<section class="clients">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 owl-carousel owl-theme">
@@ -458,5 +495,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 @endsection

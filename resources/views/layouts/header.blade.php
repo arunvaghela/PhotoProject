@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <title>Florya Weddings | Wedding & Event Planner</title>
+    <title>Areion Productions | Wedding & Event Planner</title>
     <link rel="shortcut icon" href="{{url('assets/img/favicon.png')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didact+Gothic&amp;family=Playfair+Display:ital@0;1&amp;display=swap">
     <link rel="stylesheet" href="{{ url('assets/css/plugins.css') }}"/>
@@ -29,7 +29,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="logo-wrapper">
-            <a class="logo" href="index.html"> <img src="{{url('assets/img/logo.png')}}" class="logo-img" alt=""> </a>
+            <a class="logo" href="{{url('/')}}"> <img src="{{url('/assets/img/logo.png')}}" class="logo-img" alt=""> </a>
             <!-- <a class="logo" href="index.html"> <h2>Florya</h2> </a> -->
         </div>
         <!-- Button -->

@@ -9,10 +9,9 @@
                 <div class="col-md-5 slider-text js-fullheight">
                     <div class="slider-text-inner">
                         <div class="desc">
-                            <h4>Florya Weddings</h4>
-                            <h1>Samantha Megan</h1>
-                            <p>I am Samantha, wedding planner for colorful couples, a hopeless romantic who loves bold
-                                statements.</p>
+                            <h1>Areion Productions</h1>
+                            {{--<p>I am Samantha, wedding planner for colorful couples, a hopeless romantic who loves bold
+                                statements.</p>--}}
                         </div>
                     </div>
                 </div>
@@ -29,34 +28,14 @@
             <div class="row">
                 <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle">About Us</div>
-                    <div class="section-title">Florya <span>Weddings</span></div>
-                    <p>You can choose any country with good tourism wedding elementum sesue the aucan vestibulum aliquam
-                        justo in sapien rutrum volutpat. Donec in quis the pellentesque velit florya id velit ac arcu
-                        posuere blane.</p>
-                    <p>Wedding nissuam nestibulum ac quam nec odio elementum ceisue the miss varius natoque penatibus et
-                        magnis dis parturient monte.</p>
-                    <ul class="list-unstyled about-list mb-30">
-                        <li>
-                            <div class="about-list-icon"><span class="ti-check"></span></div>
-                            <div class="about-list-text">
-                                <p>20 Years of Experience</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="about-list-icon"><span class="ti-check"></span></div>
-                            <div class="about-list-text">
-                                <p>250+ Wedding Planner</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <hr class="border">
-                    <div class="about-bottom">
-                        <img src="img/signature-dark.svg" alt="" class="image about-signature">
-                        <div class="about-name-wrapper">
-                            <div class="about-name">Samantha Megan</div>
-                            <div class="about-rol">Wedding Planner</div>
-                        </div>
-                    </div>
+                    <div class="section-title">Areion <span>Productions</span></div>
+                    <p>Providing luxurious corporate events and providing affordable premium event planning, photography, and videography services are our areas of expertise at Areion Productions. Our specialty is creating unforgettable events that your guests won't soon forget. Our committed crew goes above and beyond to make sure your event is stress-free and unforgettable.</p>
+                    <p>At Areion Productions, we firmly think that every occasion, no matter how big or small, deserves a special touch. Whether it's a formal corporate event or a small-scale get-together, we work directly with you to fully realize your idea. We guarantee that every aspect of your event will be done smoothly and without putting undue burden on you thanks to our creative flare, thorough attention to detail, and excellent service.</p>
+                    <p>Discover comprehensive information about our outstanding event photography and videography services by exploring our website. Whether you need stunning visuals for your event, whether it's photography or videography, we've got you covered.
+                        At Areion Productions, we're deeply passionate about capturing the essence and magic of every occasion. Our skilled team of photographers and videographers is committed to immortalizing your special moments in the most captivating and artistic manner possible. From candid shots to expertly edited videos, we aim to deliver exceptional quality that leaves a lasting impression.</p>
+                    <p>Reach out to us today to schedule a consultation and let us assist you in planning your unforgettable event with our remarkable event photography and videography services. Allow us to collaborate with you in creating cherished memories that will be treasured for a lifetime.</p>
+                   <hr class="border">
+
                 </div>
                 <div class="col-md-5 offset-md-1 animate-box" data-animate-effect="fadeInUp">
                     <div class="img-exp">
@@ -75,7 +54,7 @@
                                 <g>
                                     <use xlink:href="#circlePath" fill="none"/>
                                     <text fill="#575c57">
-                                        <textPath xlink:href="#circlePath"> . florya weddings . planner</textPath>
+                                        <textPath xlink:href="#circlePath"> . areion productions . planner</textPath>
                                     </text>
                                 </g>
                             </svg>
@@ -85,108 +64,7 @@
             </div>
         </div>
     </section>
-    <!-- Wedding Dates -->
-    <section class="section-padding bg-green">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="section-subtitle white">Dateline</div>
-                    <div class="section-title white">Wedding <span class="white">Dates</span></div>
-                    <p class="white">Your at-a-glance guide to where I stand on all the truly important things. Wedding
-                        elit miss the eget the solin miss citudino selus rutrum in miss vestibulum eleifen ornare
-                        torto.</p>
-                    <div class="butn-light mt-15 mb-30"><a href="contact.html"><span>Get in touch</span></a></div>
-                </div>
-                <div class="col-md-6 offset-md-1">
-                    <table class="wedding-date-table">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <h6>1. Switzerland<br><span>{September : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>florya</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>2. Italy<br><span>{October : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Rome</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>3. Amsterdam<br><span>{November : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Netherlands</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>4. Spain<br><span>{December : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Barcelona</p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team -->
-    <section class="team section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mb-30">
-                    <div class="section-subtitle">Our Senior</div>
-                    <div class="section-title">Wedding <span>Team</span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="img left">
-                        <img src="{{asset('assets/img/team/team1.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 valign animate-box" data-animate-effect="fadeInRight">
-                    <div class="content">
-                        <div class="cont text-left">
-                            <h4><span>Jesica</span> | Event Planner</h4>
-                            <p>Wedding inilla duiman at elit finibus viverra nec a lacus in the nesuzin sinem misuscit
-                                non sesue in miss the aucan volus.</p>
-                            <p>Event nissuam nestibulum duru quam nec odio elementum ceisue the misso varius natoque
-                                penatibus et magnis dis monte. Donec tuis in the velition florya id velit ac in the miss
-                                arcu posuere blane.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 order2 valign animate-box" data-animate-effect="fadeInLeft">
-                    <div class="content">
-                        <div class="cont text-left">
-                            <h4 class="white"><span>Patricia</span> | Wedding Planner</h4>
-                            <p class="white">Wedding inilla duiman at elit finibus viverra nec a lacus in the nesuzin
-                                sinem misuscit non sesue in miss the aucan volus.</p>
-                            <p class="white">Event nissuam nestibulum duru quam nec odio elementum ceisue the misso
-                                varius natoque penatibus et magnis dis monte. Donec tuis in the velition florya id velit
-                                ac in the miss arcu posuere blane.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 order1 animate-box" data-animate-effect="fadeInRight">
-                    <div class="img">
-                        <img src="{{asset('assets/img/team/team2.jpg')}}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Testiominals -->
     <section class="testimonials">
         <div class="background bg-img bg-fixed section-padding pb-0" data-background="{{asset('assets/img/slider/17.jpg')}}"
@@ -230,7 +108,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item"> <span>
+                                <div class="item">
+                                    <span>
                                         <i class="star-rating"></i>
                                         <i class="star-rating"></i>
                                         <i class="star-rating"></i>
@@ -253,79 +132,5 @@
             </div>
         </div>
     </section>
-    <!-- Faqs -->
-    <section class="section-padding bg-green">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-30">
-                    <div class="section-subtitle white">F.A.Qs</div>
-                    <div class="section-title white">Wedding <span class="white">Questions</span></div>
-                    <p class="white">Questions aliquet orci elit gene tristique in lorem dream vitae. Aliquam
-                        tincidunten felis sed gravida aliquam neque libero hendrerit mana the amentane the mollis lacus
-                        quam maurisine erase.</p>
-                    <p class="white">Wedding inilla duiman at elit finibus viverra nec a lacus in the nesuzin senenoice
-                        misuscit non sesue the aucan volus.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="accordion-box clearfix">
-                        <li class="accordion block">
-                            <div class="acc-btn">How do I plan a wedding in three months?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">Do we need a wedding planner?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">How should you deal with wedding stress?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">How do you plan a destination wedding?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">What stationery do I need for my wedding?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+
 @endsection

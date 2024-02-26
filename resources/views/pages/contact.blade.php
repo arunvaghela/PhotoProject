@@ -11,8 +11,8 @@
                         <div class="desc">
                             <h4>Get in touch</h4>
                             <h1>Contact Information</h1>
-                            <p>Fill out the form below I’ll get back to you within 24 hours to book a discovery call and
-                                start chatting about all the exciting possibilities.</p>
+                            <p>Please complete the form below, and I'll reach out to you within 24 hours to schedule a
+                                discovery call and begin discussing the myriad of exciting possibilities ahead.</p>
                         </div>
                     </div>
                 </div>
@@ -32,20 +32,20 @@
                     <div class="contact-info mb-30">
                         <div class="icon"><span class="ti-headphone-alt"></span></div>
                         <div class="text">
-                            <p>Exploration Call</p> <a href="tel:855-100-333">855 100 3333</a>
+                            <p>Exploration Call</p> <a href="tel:323-804-9319">+1 (323) 804-9319</a>
                         </div>
                     </div>
                     <div class="contact-info mb-30">
                         <div class="icon"><span class="ti-envelope"></span></div>
                         <div class="text">
-                            <p>Email Info</p> <a href="mailto:info@luxuryhotel.com">wedding@florya.com</a>
+                            <p>Email Info</p> <a href="mailto:info@areionproductions.com">info@areionproductions.com</a>
                         </div>
                     </div>
                     <div class="contact-info mb-30">
                         <div class="icon"><span class="ti-location-pin"></span></div>
                         <div class="text">
-                            <p>Address</p> 1616 Broadway NY, New York 10001
-                            <br>United States of America
+                            <p>Address</p> {{--1616 Broadway NY, New York 10001<br>--}}
+                            United States of America
                         </div>
                     </div>
                 </div>
@@ -91,86 +91,12 @@
                 <div class="col-md-12">
                     <div class="google-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1573147.7480448114!2d-74.84628175962355!3d41.04009641088412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25856139b3d33%3A0xb2739f33610a08ee!2s1616%20Broadway%2C%20New%20York%2C%20NY%2010019%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1646760525018!5m2!1str!2str"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03609235!2d-74.30933268632423!3d40.697539959410896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1708969741325!5m2!1sen!2sin"
                             width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Faqs -->
-    <section class="section-padding bg-green">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-30">
-                    <div class="section-subtitle white">F.A.Qs</div>
-                    <div class="section-title white">Wedding <span class="white">Questions</span></div>
-                    <p class="white">Questions aliquet orci elit gene tristique in lorem dream vitae. Aliquam
-                        tincidunten felis sed gravida aliquam neque libero hendrerit mana the amentane the mollis lacus
-                        quam maurisine erase.</p>
-                    <p class="white">Wedding inilla duiman at elit finibus viverra nec a lacus in the nesuzin senenoice
-                        misuscit non sesue the aucan volus.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="accordion-box clearfix">
-                        <li class="accordion block">
-                            <div class="acc-btn">How do I plan a wedding in three months?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">Do we need a wedding planner?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">How should you deal with wedding stress?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">How do you plan a destination wedding?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion block">
-                            <div class="acc-btn">What stationery do I need for my wedding?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Wedding aliquet orci elit gene tristique in lorem dream vitanem
-                                        alisuam tincidunten felis sedat bir ravida alisuam neque liberta hendrerit manas
-                                        the amentane the mollis erase.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+
 @endsection

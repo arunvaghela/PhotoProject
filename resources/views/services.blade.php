@@ -39,7 +39,7 @@
         </div>
     </section>
     <!-- Faqs -->
-    <section class="section-padding bg-green">
+    {{--<section class="section-padding bg-green">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-30">
@@ -112,9 +112,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
     <!-- Other Services -->
-    <section class="services section-padding">
+    {{--<section class="services section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mb-30">
@@ -163,5 +163,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 @endsection
