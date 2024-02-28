@@ -4370,7 +4370,7 @@ select {
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 .progress-wrap::after {
-    color: #748173;
+    color: #ffffff;
 }
 .progress-wrap svg.progress-circle path {
     stroke: #748173;
@@ -4523,6 +4523,67 @@ select {
     margin-top:16px;
 }
 
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width: 768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: 0.7rem dotted #b3b9cd;
+        width: 10rem;
+        position: absolute;
+        left: 20rem;
+        top: 0.3125rem;
+    }
+
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: 0.7rem dotted #b3b9cd;
+        width: 10rem;
+        position: absolute;
+        right: 20rem;
+        top: 0.3125rem;
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 20rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b3b9cd
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #b3b9cd;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
+}
 
 /* ======= Responsive style ======= */
 @media (min-width: 1200px) {

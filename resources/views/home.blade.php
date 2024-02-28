@@ -230,94 +230,60 @@
     <!-- Wedding Dates -->
     <section class="section-padding bg-green">
         <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="section-subtitle white">Dateline</div>
-                    <div class="section-title white">Wedding <span class="white">Dates</span></div>
-                    <p class="white">Your at-a-glance guide to where I stand on all the truly important things. Wedding
-                        elit miss the eget the solin miss citudino selus rutrum in miss vestibulum eleifen ornare
-                        torto.</p>
-                    <div class="butn-light mt-15 mb-30"><a href="contact.html"><span>Get in touch</span></a></div>
-                </div>
-                <div class="col-md-6 offset-md-1">
-                    <table class="wedding-date-table">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <h6>1. Switzerland<br><span>{September : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>florya</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>2. Italy<br><span>{October : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Rome</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>3. Amsterdam<br><span>{November : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Netherlands</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h6>4. Spain<br><span>{December : 2024}</span></h6>
-                            </td>
-                            <td>
-                                <p>Barcelona</p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+            <div class="row text-center justify-content-center mb-5">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="section-title white">A Company Evolution</div>
+                    <p class="white">We’re very proud of the path we’ve taken. Explore the history that made us the
+                        company
+                        we are today.</p>
                 </div>
             </div>
-            {{--<div class="row">
-            <ol class="ps-timeline">
-                <li>
-                    <div class="img-handler-top">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_03.png" alt=""/>
+            <div class="row">
+                <div class="col">
+                    <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                 data-placement="top" title
+                                 data-content="And here's some amazing content. It's very engaging. Right?"
+                                 data-original-title="2003">
+                                <div class="inner-circle"></div>
+                                <p class="white">BRAINSTORM CAL <i class="fa fa-camera-retro" style="font-size:24px"></i></p>
+                                <p class="white">Even if you're typically camera-shy, I'll ensure you feel at ease.
+                                    Guiding you through poses and eliciting genuine laughter, together we'll craft the
+                                    perfect video moment.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                 data-placement="top" title
+                                 data-content="And here's some amazing content. It's very engaging. Right?"
+                                 data-original-title="2004">
+                                <div class="inner-circle"></div>
+                                <p class="white">RECEIVE YOUR FINAL
+                                    PROJECT <i class="fa fa-users" style="font-size:24px"></i>
+                                </p>
+                                <p class="white">Even if you're typically camera-shy, I'll ensure you feel at ease.
+                                    Guiding you through poses and eliciting genuine laughter, together we'll craft the
+                                    perfect video moment.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                 data-placement="top" title
+                                 data-content="And here's some amazing content. It's very engaging. Right?"
+                                 data-original-title="2005">
+                                <div class="inner-circle"></div>
+                                <p class="white">
+                                    RECEIVE YOUR FINAL PROJECT <i class="fa fa-video-camera" style="font-size:24px"></i>
+                                </p>
+                                <p class="white">Depending on the project, approximately one month post-video shoot, you
+                                    can expect to receive the color-graded video clips along with the after-movie.</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="ps-bot">
-                        <p>Do you have a recent injury or long term pain?</p>
-                    </div>
-                    <span class="ps-sp-top">01</span>
-                </li>
-                <li>
-                    <div class="img-handler-bot">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_13.png" alt=""/>
-                    </div>
-                    <div class="ps-top">
-                        <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
-                    </div>
-                    <span class="ps-sp-bot">02</span>
-                </li>
-                <li>
-                    <div class="img-handler-top">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_05.png" alt=""/>
-                    </div>
-                    <div class="ps-bot">
-                        <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
-                    </div>
-                    <span class="ps-sp-top">03</span>
-                </li>
-                <li>
-                    <div class="img-handler-bot">
-                        <img src="http://www.physology.co.uk/wp-content/uploads/2016/02/ps-elem_10.png" alt=""/>
-                    </div>
-                    <div class="ps-top">
-                        <p>Join our happy family of pain free clients.</p>
-                    </div>
-                    <span class="ps-sp-bot">04</span>
-                </li>
-            </ol>
-            </div>--}}
+                </div>
+            </div>
         </div>
     </section>
     <!-- Portfolio -->
@@ -428,7 +394,7 @@
                         <div class="cont text-left">
                             <h4>Get in touch</h4>
                             <p>Ask me a question, I'd love to hear more from you.</p>
-                            <form action="{{ route('sendmail') }}" class="contact__form" method="post">
+                            <form action="{{ route('sendmail') }}" method="post">
                             @csrf
 
                             <!-- form message -->
