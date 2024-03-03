@@ -6,6 +6,7 @@ use App\Mail\AdminContactMail;
 use App\Mail\CustomerContactMail;
 use App\Models\Portfolio;
 use App\Models\PortfolioType;
+use App\Models\Review;
 use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -31,12 +32,21 @@ class PageController extends Controller
             $portfolio->random(6);
         }
 
-        return view('home', compact('img1', 'img2', 'img3', 'services', 'portfolio'));
+        $review = Review::all();
+        if ($review->isNotEmpty() && $review->count() > 6) {
+            $review->random(6);
+        }
+
+        return view('home', compact('img1', 'img2', 'img3', 'services', 'portfolio', 'review'));
     }
 
     public function about()
     {
-        return view('pages.about');
+        $review = Review::all();
+        if ($review->isNotEmpty() && $review->count() > 6) {
+            $review->random(6);
+        }
+        return view('pages.about', compact('review'));
     }
 
     public function service()

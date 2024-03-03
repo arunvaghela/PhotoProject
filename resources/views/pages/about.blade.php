@@ -74,57 +74,24 @@
                     <div class="col-md-8 offset-md-2 text-center">
                         <div class="testimonials-box">
                             <div class="owl-carousel owl-theme">
-                                <div class="item">
+                                @forelse($review as $key => $value)
+                                    <div class="item">
                                     <span>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
+                                        @for($i=0; $i<$value->rate; $i++)
+                                            <i class="star-rating"></i>
+                                        @endfor
+
                                     </span>
-                                    <h5>" If you manage to get Samantha as your wedding planner, you are one lucky
-                                        couple. We highly recommend! "</h5>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h6>Emily & Enrico <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
-                                            </h6>
+                                        <h5>" {{$value->desc}} "</h5>
+                                        <div class="info">
+                                            <div class="cont">
+                                                <h6>{{ $value->name }}</span>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <span>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                    </span>
-                                    <h5>" If you manage to get Duru as your wedding planner, you are one lucky couple.
-                                        We highly recommend! "</h5>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h6>Cynthia & Carl <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <span>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                    </span>
-                                    <h5>" If you manage to get Duru as your wedding planner, you are one lucky couple.
-                                        We highly recommend! "</h5>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h6>Lauren & Wayne <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
+                                @empty
+                                @endforelse
                             </div>
                         </div>
                     </div>

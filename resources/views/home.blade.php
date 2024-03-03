@@ -9,12 +9,7 @@
                     <div class="row h-100">
                         <div class="col-md-6 slider-text js-fullheight">
                             <div class="slider-text-inner">
-                                <div class="desc">
-                                    <h4>AREION PRODUCTIONS</h4>
-                                    <h1>Wedding & Event Planner For Colorful Couples</h1>
-                                    <p>We love the opportunity to get together and discuss how we can make your dream
-                                        wedding a reality.</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -29,7 +24,7 @@
             <div class="row">
                 <div class="col-md-5 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle white">What we do</div>
-                    <div class="section-title white">A wedding that is <span class="white">True</span> as you are!</div>
+                    <div class="section-title white">Planning and Covering your <span class="white"> event </span> !</div>
                     {{--<p>We would love to meet up and chat about how we can make your dream wedding happen! Nullam
                         vestibulum iaculis maximus. International facilisis leo at ac tristique nunc vulputate.</p>--}}
                 </div>
@@ -52,10 +47,8 @@
                     <div class="section-title">Explore <span>Services</span></div>
                 </div>
                 <div class="col-md-7 mb-30">
-                    <p>As a professional Wedding and Event Planner, I specialize in creating memorable experiences. With
-                        a great eye for detail and a desire for perfection, I make fantasies a reality. Lorem, dolor sit
-                        amet, consectetur adipiscing elit. Cras tristique lorem vitae consectetur. Sed gravida aliquam
-                        libero, hendrerit magna. Duis lacus quis mauris aliquam, sed erat volutpat.</p>
+                    <p>The team at AREION PRODUCTIONS takes care of every detail so your event is special, extraordinary, and unforgettable. We'll be with you every step of the way and on your special day, with everything you need – before you know you need it.</p>
+<p>We are here to assist in orchestrating events in locations across the globe that hold significant meaning in your relationship.</p>
                 </div>
             </div>
             <div class="row">
@@ -108,56 +101,24 @@
                     <div class="col-md-8 offset-md-2 text-center">
                         <div class="testimonials-box">
                             <div class="owl-carousel owl-theme">
+                                @forelse($review as $key => $value)
                                 <div class="item">
                                     <span>
+                                        @for($i=0; $i<$value->rate; $i++)
                                         <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
+                                        @endfor
+
                                     </span>
-                                    <h5>" If you manage to get Samantha as your wedding planner, you are one lucky
-                                        couple. We highly recommend! "</h5>
+                                    <h5>" {{$value->desc}} "</h5>
                                     <div class="info">
                                         <div class="cont">
-                                            <h6>Emily & Enrico <i>|</i> <span><a href="portfolio-page.html">View the wedding</a></span>
+                                            <h6>{{ $value->name }}</span>
                                             </h6>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <span>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                    </span>
-                                    <h5>" If you manage to get Duru as your wedding planner, you are one lucky couple.
-                                        We highly recommend! "</h5>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h6>Cynthia & Carl <i>|</i> <span><a href="javascript:void(0)">View the wedding</a></span>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item"> <span>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                        <i class="star-rating"></i>
-                                    </span>
-                                    <h5>" If you manage to get Duru as your wedding planner, you are one lucky couple.
-                                        We highly recommend! "</h5>
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h6>Lauren & Wayne <i>|</i> <span><a href="javascript:void(0)">View the wedding</a></span>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
+                                @empty
+                                @endforelse
                             </div>
                         </div>
                     </div>
@@ -178,25 +139,14 @@
                         experience amid stunning scenery and a diverse range of cultures as you research your
                         alternatives.</p>
                     <ul class="list-unstyled about-list mb-30">
-                        <li>
-                            <div class="about-list-icon"><span class="ti-check"></span></div>
-                            <div class="about-list-text">
-                                <p>5+ Years of Experience</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="about-list-icon"><span class="ti-check"></span></div>
-                            <div class="about-list-text">
-                                <p>99+ Wedding Planner</p>
-                            </div>
-                        </li>
+
                     </ul>
                     <hr class="border">
                     <div class="about-bottom">
                         {{--<img src="{{url('assets/img/signature-dark.svg')}}" alt="" class="image about-signature">--}}
                         <div class="about-name-wrapper">
                             <div class="about-name">Areion Productions</div>
-                            <div class="about-rol">Wedding Planner</div>
+
                         </div>
                     </div>
                 </div>
@@ -205,23 +155,7 @@
                         <div class="about-img">
                             <div class="img"><img src="{{url('assets/img/about.jpg')}}" class="img-fluid" alt=""></div>
                         </div>
-                        <div id="circle">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px"
-                                 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                                <defs>
-                                    <path id="circlePath"
-                                          d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
-                                </defs>
-                                <circle cx="150" cy="100" r="75" fill="none"/>
-                                <g>
-                                    <use xlink:href="#circlePath" fill="none"/>
-                                    <text fill="#575c57">
-                                        <textPath xlink:href="#circlePath"> . areion productions . planner</textPath>
-                                    </text>
-                                </g>
-                            </svg>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -232,10 +166,8 @@
         <div class="container">
             <div class="row text-center justify-content-center mb-5">
                 <div class="col-xl-6 col-lg-8">
-                    <div class="section-title white">A Company Evolution</div>
-                    <p class="white">We’re very proud of the path we’ve taken. Explore the history that made us the
-                        company
-                        we are today.</p>
+                    <div class="section-title white">Company Evolution</div>
+                    <p class="white">Explore the history that made us the company we are today.</p>
                 </div>
             </div>
             <div class="row">
@@ -247,7 +179,7 @@
                                  data-content="And here's some amazing content. It's very engaging. Right?"
                                  data-original-title="2003">
                                 <div class="inner-circle"></div>
-                                <p class="white">BRAINSTORM CAL <i class="fa fa-camera-retro" style="font-size:24px"></i></p>
+                                <p class="white">BRAINSTORM CALL </p>
                                 <p class="white">Even if you're typically camera-shy, I'll ensure you feel at ease.
                                     Guiding you through poses and eliciting genuine laughter, together we'll craft the
                                     perfect video moment.</p>
@@ -259,12 +191,8 @@
                                  data-content="And here's some amazing content. It's very engaging. Right?"
                                  data-original-title="2004">
                                 <div class="inner-circle"></div>
-                                <p class="white">RECEIVE YOUR FINAL
-                                    PROJECT <i class="fa fa-users" style="font-size:24px"></i>
-                                </p>
-                                <p class="white">Even if you're typically camera-shy, I'll ensure you feel at ease.
-                                    Guiding you through poses and eliciting genuine laughter, together we'll craft the
-                                    perfect video moment.</p>
+                                <p class="white">SHOOT DAY</p>
+                                <p class="white">We will make sure you feel comfortable, even if you are not used to being in front of the camera. We will assist you in posing and encourage sincere laughter so that the ideal video is captured.</p>
                             </div>
                         </div>
                         <div class="timeline-step">
@@ -274,10 +202,9 @@
                                  data-original-title="2005">
                                 <div class="inner-circle"></div>
                                 <p class="white">
-                                    RECEIVE YOUR FINAL PROJECT <i class="fa fa-video-camera" style="font-size:24px"></i>
+                                    RECEIVE YOUR FINAL PROJECT
                                 </p>
-                                <p class="white">Depending on the project, approximately one month post-video shoot, you
-                                    can expect to receive the color-graded video clips along with the after-movie.</p>
+                                <p class="white">Depending on the project, approximately One to two months, color graded video clips along with edited speak peak photos.along with the after-movie.</p>
                             </div>
                         </div>
 
@@ -291,7 +218,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
-                    <div class="section-subtitle">Works</div>
+
                     <div class="section-title">Our <span>Portfolio</span></div>
                 </div>
             </div>
@@ -409,13 +336,13 @@
                                 <!-- form elements -->
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input name="name" type="text" placeholder="Your Name *" required>
+                                        <input name="name" type="text" placeholder="Name *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="email" type="email" placeholder="Your Email *" required>
+                                        <input name="email" type="email" placeholder="Email *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="phone" type="text" placeholder="Your Number *" required>
+                                        <input name="phone" type="text" placeholder="Phone Number *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <input name="subject" type="text" placeholder="Subject *" required>
@@ -435,31 +362,4 @@
             </div>
         </div>
     </section>
-    <!-- Clients -->
-    {{--<section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/1.png')}}" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/2.png')}}" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/3.png')}}" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/4.png')}}" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/5.png')}}" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="{{url('assets/img/clients/6.png')}}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--}}
 @endsection

@@ -46,6 +46,8 @@
         maxHeight: 1000 } ).catch( error => {console.error( error );} );
     ClassicEditor.create( document.querySelector( '#short_desc' ), { minHeight: 500,
         maxHeight: 1000 } ).catch( error => {console.error( error );} );
+    // ClassicEditor.create( document.querySelector( '#desc' ), { minHeight: 500,
+    //     maxHeight: 1000 } ).catch( error => {console.error( error );} );
 
 </script>
 </body>

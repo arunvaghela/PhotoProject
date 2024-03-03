@@ -6,10 +6,7 @@
                 <div class="col-md-4">
                     <div class="footer-column footer-about">
                         <h3 class="footer-title">Areion Productions</h3>
-                        <p class="footer-about-text">Hi there, As a wedding planner and creator, I'm Areion Productions,
-                            and I'm loving life in the energetic metropolis of New York. I love to seize any opportunity
-                            to create unique experiences for couples. Together, let's make your ideal wedding a
-                            reality!</p>
+                        <p class="footer-about-text"><strong> THE AREION PRODUCTIONS: </strong>US-based photographer, videographer, wedding planner, and Full Production House!</p>
                     </div>
                 </div>
                 <div class="col-md-3 offset-md-1">
@@ -101,5 +98,5 @@
     });
 </script>
 </body>
-<!-- Mirrored from duruthemes.com/demo/html/florya/light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jan 2024 10:19:47 GMT -->
+
 </html>

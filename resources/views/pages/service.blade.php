@@ -10,7 +10,7 @@
                     <div class="slider-text-inner">
                         <div class="desc">
                             <h4>What we do</h4>
-                            <h1>Our Wedding Planning Services</h1>
+                            <h1>Our Event Planning Services</h1>
                             <p>Experienced Wedding & Event Planner excels in crafting unforgettable dream occasions with impeccable attention to detail.</p>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -53,4 +54,10 @@ Route::prefix('admin')->group(function () {
     Route::put('/portfolio/{id}', [PortfolioController::class, 'update'])->middleware('auth')->name('admin.portfolio.update');
     Route::delete('/portfolio/{id}', [PortfolioController::class, 'destroy'])->middleware('auth')->name('admin.portfolio.destroy');
 
+    Route::get('/reviews', [ReviewController::class, 'index'])->middleware('auth')->name('admin.reviews');
+    Route::get('/reviews/create', [ReviewController::class, 'create'])->middleware('auth')->name('admin.reviews.create');
+    Route::post('/reviews/store', [ReviewController::class, 'store'])->middleware('auth')->name('admin.reviews.store');
+    Route::get('/reviews/{id}/edit', [ReviewController::class, 'edit'])->middleware('auth')->name('admin.reviews.edit');
+    Route::put('/reviews/{id}', [ReviewController::class, 'update'])->middleware('auth')->name('admin.reviews.update');
+    Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->middleware('auth')->name('admin.reviews.destroy');
 });

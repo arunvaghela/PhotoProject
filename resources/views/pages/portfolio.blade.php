@@ -10,8 +10,8 @@
                     <div class="slider-text-inner">
                         <div class="desc">
                             <h4>Portfolio</h4>
-                            <h1>Wedding Planner & Event Portfolio</h1>
-                            <p>Browse our portfolio of select weddings we've planned in the New York area.</p>
+                            <h1>Events Portfolio</h1>
+                            <p>Browse our portfolio of select EVENTS we've planned in the all area.</p>
                         </div>
                     </div>
                 </div>

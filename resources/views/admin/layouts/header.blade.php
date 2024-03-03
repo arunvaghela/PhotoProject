@@ -66,6 +66,7 @@
                 <a href="{{ url('/admin') }}" class="nav-item nav-link {{ (request()->is('/admin') || request()->is('/admin/create') || request()->segment(3) == 'edit' )  ? 'active' : '' }} "><i class="fa fa-tachometer-alt me-2"></i>Sliders</a>
                 <a href="{{ url('/admin/services') }}" class="nav-item nav-link {{ (request()->segment(2) == 'services') ? 'active' : '' }} "><i class="fa fa-th me-2"></i>Services</a>
                 <a href="{{ url('/admin/portfolio') }}" class="nav-item nav-link {{ (request()->segment(2) == 'portfolio') ? 'active' : '' }} "><i class="fa fa-keyboard me-2"></i>Portfolio</a>
+                <a href="{{ url('/admin/reviews') }}" class="nav-item nav-link {{ (request()->segment(2) == 'reviews') ? 'active' : '' }} "><i class="fa fa-keyboard me-2"></i>Reviews</a>
 
             </div>
         </nav>

@@ -26,8 +26,8 @@ class ServiceController extends Controller
             'short_desc' => 'required',
             'long_desc' => 'required',
             'active' => 'required',
-            'slider_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'desc_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'slider_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'desc_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $imageSliderName = time().'slider.'.$request->slider_image->extension();
@@ -61,8 +61,8 @@ class ServiceController extends Controller
             'short_desc' => 'required',
             'long_desc' => 'required',
             'active' => 'required',
-            'slider_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'desc_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'slider_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'desc_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $services = Service::findOrFail($id);

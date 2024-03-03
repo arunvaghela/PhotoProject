@@ -26,7 +26,7 @@ class SliderController extends Controller
     {
         $request->validate([
             'active' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $imageName = time().'.'.$request->image->extension();
@@ -50,7 +50,7 @@ class SliderController extends Controller
     {
         $request->validate([
             'active' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $slides = Slider::findOrFail($id);
