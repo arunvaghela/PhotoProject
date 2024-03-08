@@ -48,7 +48,7 @@
                         <div class="square2 bg-green">
                             <div class="square-container2">
                                 <h4>{{ ucfirst($val->first_name) }} & {{ ucfirst($val->last_name) }}</h4>
-                                <p>{!! $val->short_desc !!}</p>
+{{--                                <p>{!! $val->short_desc !!}</p>--}}
 
                                 <div class="btn-line"><a href="{{ route('portfolio', $val->id) }}">Find out more</a></div>
                             </div>

@@ -30,8 +30,6 @@ class PortfolioController extends Controller
             'slider_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'home_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'gallery_image.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'youtube_link' => 'required',
-            'youtube_link1' => 'required',
             'home_Video_link' => 'required',
         ]);
 
@@ -99,8 +97,6 @@ class PortfolioController extends Controller
             'slider_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'home_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'gallery_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'youtube_link' => 'required',
-            'youtube_link1' => 'required',
             'home_Video_link' => 'required',
         ]);
 

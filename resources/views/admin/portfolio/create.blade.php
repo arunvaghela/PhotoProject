@@ -69,14 +69,14 @@
                         </div>
 
                         <div class="mb-3 col-md-11">
-                            <label for="youtube_link" class="form-label">Youtube Links <span style="color: red;">*</span></label>
+                            <label for="youtube_link" class="form-label">Youtube Links</label>
                             <input type="text" class="form-control" id="youtube_link" name="youtube_link"
-                                   placeholder="YouTube Link" required>
+                                   placeholder="YouTube Link" >
                         </div>
                         <div class="mb-3 col-md-11">
-                            <label for="youtube_link1" class="form-label">Youtube Links 1 <span style="color: red;">*</span></label>
+                            <label for="youtube_link1" class="form-label">Youtube Links 1 </label>
                             <input type="text" class="form-control" id="youtube_link1" name="youtube_link1"
-                                   placeholder="YouTube Link 1" required>
+                                   placeholder="YouTube Link 1" >
                         </div>
                         <div class="mb-3 col-md-11">
                             <label for="youtube_link2" class="form-label">Youtube Links 2</label>

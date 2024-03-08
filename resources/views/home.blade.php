@@ -240,7 +240,7 @@
                                 <div class="square2 bg-green">
                                     <div class="square-container2">
                                         <h4>{{ ucfirst($valp->first_name) }} & {{ ucfirst($valp->last_name) }}</h4>
-                                        <p>{!! $valp->short_desc !!}</p>
+                                        {{--<p>{!! $valp->short_desc !!}</p>--}}
                                         {{--<div class="row portfolio-list mb-30">
                                             <div class="col-md-12">
                                                 <ul>
